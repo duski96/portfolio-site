@@ -1,0 +1,73 @@
+body{
+    font-family: 'Cormorant SC', 'Noto Serif KR', serif;
+    word-break: keep-all;
+}
+
+body.scroll_lock{
+    overflow: hidden;
+}
+
+.container{
+    overflow: hidden;
+}
+
+h2, h3, p{
+    line-height: 1.5;
+}
+
+h2{
+    font-size: 72px;
+}
+
+h3{
+    font-size: 28px;
+}
+
+section{
+    background: white;
+}
+
+.inner{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    h2{
+        font-size: 68px;
+    }
+    
+    h3{
+        font-size: 24px;
+    }
+
+    .inner{
+        width: 95%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: 62px;
+    }
+    
+    h3{
+        font-size: 20px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 480px) {
+    h2{
+        font-size: 48px;
+    }
+    
+    h3{
+        font-size: 18px;
+        text-align: center;
+    }
+}

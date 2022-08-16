@@ -1,0 +1,1068 @@
+header{
+    height: 130px;
+}
+
+nav h1{
+    margin-right: 50px;
+    margin-top: 42px;
+}
+
+nav h1, nav > ul{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+nav > ul > li{
+    display: inline-block;
+    width: 140px;
+    font-size: 22px;
+    position: relative;
+}
+
+nav > ul > li:first-child{
+    display: none;
+}
+
+nav > ul > li  a{
+    line-height: 130px;
+}
+
+nav > ul > li > img{
+    display: none;
+}
+
+nav > ul > li  a:hover{
+    color: #3c92e3;
+}
+
+nav{
+    width: 100%;
+}
+
+.mobile_btn{
+    font-size: 0;
+    width: 35px;
+    display: none;
+    float: right;
+    margin-top: 52px;
+}
+
+.mobile_btn p{
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #3c92e3, #3bcfa0);
+    margin-bottom: 5px;
+}
+
+.mobile_btn p:last-child{
+    margin-bottom: 0;
+}
+
+nav a{
+    display: block;
+}
+
+nav > ul > li > ul{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    top: 120px;
+    display: none;
+    background-color: white;
+}
+
+nav > ul > li > ul li:first-child{
+    border-top: 10px solid;
+    border-image: linear-gradient(to right, #3c92e3, #3bcfa0);
+    border-image-slice: 1;
+}
+
+nav > ul > li > ul li a{
+    display: block;
+    line-height: 40px;
+}
+
+nav > ul > li > ul li a:hover{
+    color: #3c92e3;
+}
+
+
+/********************************메인 슬라이더***************************************/
+
+
+.slider > div{
+    height: 720px;
+    position: relative;
+}
+
+.slider div img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.slider_img_1 p, .slider_img_2 p, .slider_img_3 p{
+    position: absolute;
+    font-size: 60px;
+    color: white;
+}
+
+.slider_img_1 strong, .slider_img_2 strong, .slider_img_3 strong{
+    font-size: 114px;
+}
+
+.slider_img_1 strong{
+    color: #ff9933;
+}
+
+.slider_img_1 p, .slider_img_3 p{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider_img_1 p{
+    text-align: right;
+    background: linear-gradient(to left, rgba(0,0,0,0.9), rgba(0,0,0,0) 70%);
+    padding: 200px 10% 0 0;
+}
+
+.slider_img_2 p{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.slider_img_2 strong{
+    color: deepskyblue;
+}
+
+.slider_img_2 strong:last-child{
+    color: #ff9933;
+}
+
+.slider_img_3 p{
+    text-align: left;
+    background: linear-gradient(to right, black, rgba(0,0,0,0) 70%);
+    padding: 200px 0 0 10%;
+}
+
+.slider_img_3 strong:last-child{
+    color: red;
+}
+
+/********************************ESG 경영***************************************/
+
+.esg .title h2, .introduce .title h2{
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.esg .title h2::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: calc(100% - 151px);
+    height: 10px;
+    background: linear-gradient(to right, #3c92e3, #3bcfa0);
+    top: 18px;
+    right: 0;
+}
+
+.esg .title h2 strong, .introduce .title h2 strong{
+    font-size: 60px;
+    color: #3c92e3;
+}
+
+.esg .e_content{
+    width: 230px;
+    height: 230px;
+    border: 2px solid #d7d7d7;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 25px;
+    float: left;
+    margin-right: 75px;
+    position: relative;
+}
+
+.esg .e_content a{
+    display: block;
+}
+
+.esg .e_content .img_wrap{
+    height: 100px;
+    line-height: 100px;
+}
+
+.esg .e_content .img_wrap img{
+    vertical-align: middle;
+}
+
+.esg .e_content:first-child{
+    margin-left: calc((100% - 840px) / 2);
+}
+
+.esg .e_content:last-child{
+    margin-right: 0;
+}
+
+.esg .e_content::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 75px;
+    border: 1px dashed #d7d7d7;
+    top: 50%;
+    left: 100%;
+}
+
+.esg .e_content:last-child:after{
+    display: none;
+}
+
+.esg .e_content p:nth-of-type(1){
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.esg .e_content p:nth-of-type(2){
+    font-size: 14px;
+}
+
+.esg .e_content p strong{
+    color: #3c92e3;
+}
+
+.esg .e_content a > img{
+    position: relative;
+    left: 0;
+    transition: 0.4s;
+}
+
+
+/********************************도로교통공단 소개***************************************/
+
+
+.introduce{
+    padding-top: 50px;
+}
+
+.introduce .title h2{
+    text-align: right;
+}
+
+.introduce .title h2::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: calc(100% - 220px);
+    height: 10px;
+    background: linear-gradient(to right, #3c92e3, #3bcfa0);
+    top: 18px;
+    left: 0;
+}
+
+.introduce ul{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.introduce ul a{
+    display: block;
+}
+
+.introduce ul li{
+    display: inline-block;
+    width: 20%;
+    height: 110px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.introduce ul li:last-child{
+    margin-right: 0;
+}
+
+.introduce ul li img{
+    transition: 0.4s;
+}
+
+.introduce ul li img.hover{
+    transform: scale(1.2);
+}
+
+.introduce ul li p{
+    margin-top: 15px;
+}
+
+.introduce ul li p.hover{
+    color: #3c92e3;
+}
+
+
+/********************************안전운전 통합민원***************************************/
+
+.safe_driving{
+    margin-top: 70px;
+}
+
+.sd_flex_wrap{
+    display: flex;
+    justify-content: space-between
+}
+
+.safe_driving .title_area{
+    width: 320px;
+    height: 400px;
+    background: linear-gradient(to bottom, #3c92e3, #3bcfa0);
+    text-align: center;
+    padding-top: 55px;
+    display: inline-block;
+    position: relative;
+}
+
+.safe_driving .title_area h2{
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.safe_driving .title_area a{
+    color: white;
+    font-size: 14px;
+    display: block;
+    position: relative;
+}
+
+.safe_driving .title_area a img{
+    position: absolute;
+    bottom: 3px;
+    transition: 0.4s;
+    margin-left: 5px;
+}
+
+.safe_driving .title_area a img.hover{
+    margin-left: 12px;
+}
+
+.safe_driving .title_area > img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.safe_driving .sd_content{
+    width: 320px;
+    height: 195px;
+    position: relative;
+}
+
+.safe_driving_contents{
+    width: calc(100% - 320px - ((100% - 960px) / 2));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.c1{
+    background: url(../image/traffic_light.jpg) no-repeat center center/cover;
+}
+
+.c2{
+    background: url(../image/test_car.jpg) no-repeat center center/cover;
+}
+
+.c3{
+    background: url(../image/license.jpg) no-repeat center center/cover;
+}
+
+.c4{
+    background: url(../image/test_pc.jpg) no-repeat center center/cover;
+}
+
+.black_label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 50px;
+    transition: 0.4s;
+}
+
+.black_label.hover{
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.safe_driving_contents p{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/********************************공지***************************************/
+
+.notice{
+    margin: 70px 0;
+    background-color: #eee;
+    height: 320px;
+}
+
+.notice .inner > div{
+    float: left;
+}
+
+.notice .magazine{
+    width: 20%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.notice .magazine h2{
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.notice .magazine h2 strong{
+    font-size: 24px;
+}
+
+.notice .magazine img{
+    margin-bottom: 7px;
+}
+
+.notice .magazine p{
+    font-size: 12px;
+    text-align: left;
+    width: 135px;
+    margin: 0 auto;
+}
+
+
+.notice .banner{
+    width: 30%;
+    max-width: 270px;
+    text-align: center;
+    height: 251px;
+    margin-top: 35px;
+}
+
+.notice .banner h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.notice .banner_slider div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.notice .notice_area{
+    width: 50%;
+    margin-top: 77px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.notice .notice_area ul{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.notice .notice_area ul li{
+    width: 100px;
+    height: 40px;
+    background-color: #3c92e3;
+    opacity: 0.5;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 1px;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.notice .notice_area ul li.current{
+    margin-left: 20px;
+    opacity: 1;
+}
+
+.notice .notice_area table{
+    display: none;
+    text-align: left;
+    width: 333px;
+    position: absolute;
+    left: 35%;
+    top: 5%;
+    table-layout: fixed;
+}
+
+.notice .notice_area table:nth-of-type(1){
+    display: table;
+}
+
+.notice .notice_area table th, .notice .notice_area table td{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notice .notice_area table th{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+.notice .notice_area table td{
+    font-size: 14px;
+}
+
+.notice .notice_area table tr:nth-of-type(3) th{
+    margin-top: 40px;
+}
+
+.notice_area table:nth-of-type(3) td, .notice_area table:last-child td{
+    height: 40px;
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.notice_area table:nth-of-type(3) td img, .notice_area table:last-child td img{
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+    .mobile_btn{
+        display: block;
+    }
+
+    nav > ul{
+        display: block;
+        position: fixed;
+        width: 30%;
+        height: 100%;
+        top: 0;
+        left: 100%;
+        border-left: 2px solid #3bcfa0;
+        z-index: 9;
+        background: white;
+        text-align: left;
+        transition: 0.4s;
+        overflow: scroll;
+    }
+
+    nav > ul.current{
+        left: 70%;
+    }
+
+    nav > ul > li{
+        display: block;
+        width: 100%;
+        background: white;
+        font-size: 20px;
+    }
+
+    nav > ul > li:first-child{
+        display: list-item;
+        height: 60px;
+        background-color: #3bcfa0;
+        margin-bottom: 20px;
+        padding: 13px 10px 0 10px;
+    }
+
+    .hx img{
+        cursor: pointer;
+    }
+
+    .hx img:last-child{
+        float: right;
+        margin-top: 7px;
+    }
+    
+    nav > ul > li{
+        position: relative;
+    }
+
+    nav > ul > li span{
+        display: block;
+    }
+
+    nav > ul > li a{
+        line-height: 60px;
+        padding-left: 20px;
+        width: fit-content;
+    }
+
+    nav > ul > li > img{
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        margin-right: 12px;
+        transition: 0.4s;
+        transform: rotate(0deg);
+
+    }
+
+    nav > ul > li > ul{
+        position: static;
+        text-align: left;
+    }
+
+    nav > ul > li > ul li:first-child{
+        border-top: 5px solid;
+        border-image: linear-gradient(to right, #3c92e3, #3bcfa0);
+        border-image-slice: 1;
+    }
+
+    nav > ul > li > ul li a{
+        padding-left: 40px;
+    }
+    
+    
+    
+    /*
+    header nav > ul > li > a:hover{
+        color: #3c92e3;
+    }
+    */
+    
+    
+    
+    /*
+    nav a{
+        display: block;
+    }
+    
+    nav ul li > ul{
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        font-size: 14px;
+        background-color: white;
+        text-align: center;
+        top: 120px;
+        background: linear-gradient(to right, #3c92e3, #3bcfa0);
+        display: none;
+    }
+    
+    nav ul li > ul li{
+        background-color: white;
+    }
+    
+    nav ul li > ul li:first-child{
+        margin-top: 10px;
+    }
+    
+    nav ul li > ul li a{
+        display: block;
+        line-height: 40px;
+    }
+    
+    nav ul li > ul li a:hover{
+        color: #3c92e3;
+    }
+    */
+
+/**********************************ESG 경영*********************************/
+
+
+    .esg .e_content{
+        margin-right: 25px;
+    }
+    
+    .esg .e_content:first-child{
+        margin-left: calc((100% - 740px) / 2);
+    }
+
+    .esg .e_content::after{
+        width: 25px;
+    }
+
+
+/**********************************안전운전 통합민원*********************************/
+
+    .safe_driving .title_area{
+        width: 660px;
+        height: auto;
+        padding: 20px 0;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .safe_driving .title_area > img{
+        display: none;
+    }
+
+    .safe_driving_contents{
+        width: 660px;
+        justify-content: space-between;
+        margin: 0 auto;
+        height: 420px;
+    }
+
+    .sd_flex_wrap{
+        flex-direction: column;
+    }
+
+/**********************************공지사항*********************************/
+
+    .notice .magazine{
+        width: 25%;
+    }
+
+    .notice .banner{
+        width: 25%;
+    }
+
+    .notice .banner_slider div img{
+        width: 100%;
+    }
+
+    .notice .banner h2{
+        font-size: 25px;
+    }
+
+    .notice .notice_area{
+        padding: 0;
+        margin-top: 40px;
+
+    }
+
+    .notice .notice_area ul{
+        display: inherit;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .notice .notice_area ul li{
+        float: left;
+        width: calc(25% - (10px/4));
+        font-size: 14px;
+    }
+
+    .notice .notice_area ul li.current{
+        margin-left: 0;
+        width: calc(25% - (10px/4) + 10px);
+    }
+
+    .notice .notice_area table{
+        left: 50%;
+        top: 170%;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    nav > ul{   
+        width: 60%;
+    }
+
+    nav > ul.current{
+        left: 40%;
+    }
+
+
+
+
+    .slider > div{
+        height: 600px;
+    }
+
+    .slider_img_1 p, .slider_img_2 p, .slider_img_3 p{
+        font-size: 40px;
+    }
+    
+    .slider_img_1 strong, .slider_img_2 strong, .slider_img_3 strong{
+        font-size: 90px;
+    }
+
+    .slider_img_1 p{
+        background: linear-gradient(to left, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0));
+    }
+
+    .slider_img_3 p{
+        background: linear-gradient(to right, black, rgba(0,0,0,0) 80%);
+    }
+
+/**********************************ESG 경영*********************************/
+
+    .esg .e_content{
+        width: 215px;
+        height: 215px;
+        padding-top: 10px;
+    }
+
+    .esg .e_content:first-child{
+        margin-left: calc((100% - 455px) / 2);
+    }
+
+    .esg .e_content:nth-child(2){
+        margin-right: 0;
+    }
+
+    .esg .e_content:nth-child(2)::after{
+        transform: rotate(135deg);
+        top: 101%;
+        left: 15%;
+    }
+
+    .esg .e_content:last-child{
+        float: none;
+        clear: both;
+        margin: 0 auto;
+    }
+
+    .esg .e_content:last-child::after{
+        display: block;
+        top: -1%;
+        left: 15%;
+        transform: rotate(45deg);
+    }
+
+
+/**********************************공단 소개*********************************/
+
+
+    .introduce ul li{
+        width: 33.3333%;
+        margin-bottom: 30px;
+    }
+
+    .introduce ul li:nth-child(4), .introduce ul li:last-child{
+        margin-bottom: 0;
+    }
+
+/**********************************안전운전 통합민원*********************************/
+
+    .safe_driving .title_area{
+        width: 100%;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .safe_driving_contents{
+        width: 100%;
+        justify-content: space-around;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .safe_driving_contents a{
+        width: 50%;
+        height: 195px
+    }
+
+    .safe_driving .sd_content{
+        width: 95%;
+        height: 95%;
+        margin: 0 auto;
+    }
+
+
+/**********************************공지사항*********************************/
+
+    .notice{
+        height: 580px;
+    }
+
+    .notice .magazine{
+        width: 40%;
+        margin-left: calc((100% - (40% + 270px)) / 2);
+    }
+
+    .notice .banner{
+        width: 60%;
+    }
+
+    .notice .notice_area{
+        width: 100%;
+    }
+
+    .notice .notice_area table{
+        width: 80%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 480px){
+
+    nav h1{
+        margin-right: 0;
+    }
+
+    .mobile_btn{
+        width: 30px;
+    }
+
+
+    nav > ul {
+        width: 100%;
+        border-left: 0;
+    }
+
+    nav > ul.current{
+        left: 0%;
+    }
+
+    nav > ul > li{
+        font-size: 18px;
+    }
+
+
+    .slider > div{
+        height: 300px;
+    }
+
+    .slider_img_1 p, .slider_img_2 p, .slider_img_3 p{
+        font-size: 24px;
+    }
+    
+    .slider_img_1 strong, .slider_img_2 strong, .slider_img_3 strong{
+        font-size: 48px;
+    }
+
+    .slider_img_1 p{
+        padding-top: 90px;
+    }
+    
+    .slider_img_3 p{
+        padding-top: 80px;
+    }
+
+
+/**********************************ESG 경영*********************************/
+
+    .esg .title h2{
+        text-align: center;
+        margin: 100px 0 50px 0;
+    }
+
+    .esg .title h2::after{
+        display: none;
+    }
+
+    .esg .e_content{
+        
+        width: 230px;
+        height: 230px;
+        padding-top: 25px;
+        float: none;     
+    }
+    
+
+    .esg .e_content:first-child, .esg .e_content:nth-child(2), .esg .e_content:last-child{
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    
+    .esg .e_content:first-child::after, .esg .e_content:nth-child(2)::after{
+        width: 0;
+        height: 25px;
+        top: 100%;
+        left: 50%;
+    }
+
+    .esg .e_content:nth-child(2)::after{
+        transform: rotate(180deg);
+    }
+    
+    .esg .e_content:last-child::after{
+        display: none;
+    }
+
+
+/**********************************공단 소개*********************************/
+
+    .introduce{
+        padding-top: 80px;
+    }
+
+    .introduce .title h2{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .introduce .title h2::before{
+        display: none;
+    }
+
+    .introduce ul li{
+        width: 50%;
+    }
+
+
+/**********************************안전운전 통합민원*********************************/
+
+    
+
+    .safe_driving .title_area{
+        width: 100%;
+        height: 1000px;
+    }
+
+    .safe_driving .title_area h2{
+        margin-top: 15px;
+    }
+
+    .safe_driving .title_area a span, .safe_driving .title_area a img{
+        display: none;
+    }
+
+    .safe_driving_contents{
+        width: 100%;
+        height: calc(195px * 4 + 45px);
+        margin-top: -870px;
+    }
+
+    
+    .safe_driving_contents a{
+        width: 100%;
+        max-width: 320px;
+    }
+
+/**********************************공지사항*********************************/
+
+    .notice{
+        height: 300px;
+    }
+
+    .notice .magazine, .notice .banner{
+        display: none;
+    }
+    
+}

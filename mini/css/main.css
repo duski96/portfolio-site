@@ -1,0 +1,1248 @@
+:root{
+    --smHeight: 0;
+}
+
+/*************************************** header, main ***************************************/
+
+header{
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: calc(var(--vh, 1vh) * 100 - 100px);
+    left: 0;
+    z-index: 2;
+}
+
+header.top_zero{
+    position: fixed;
+    top: 0; /* header가 상단에 붙을 때 위치 고정 */
+}
+
+header h1{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header h1 img{
+    width: 100px;
+}
+
+nav > ul{
+    font-size: 0;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+nav > ul > li{
+    display: inline-block;
+    width: fit-content;
+    margin-right: 70px;
+}
+
+nav > ul > li:last-child{
+    margin-right: 0;
+}
+
+nav > ul > li > span{
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    line-height: 100px;
+    cursor: pointer;
+}
+
+.sub_menu{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 100%;
+    left: 0;
+    background: black;
+    text-align: center;
+    font-size: 0;
+    display: none;
+}
+
+.sub_menu.top100{
+    bottom: 0;
+    top: 100%;
+}
+
+.sub_menu li{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 60px;
+    margin-right: 25px;
+}
+
+.sub_menu li:last-child{
+    margin-right: 0;
+}
+
+.sub_menu a{
+    color: white;
+}
+
+.mobile_btn{
+    display: none;
+    font-size: 0;
+}
+
+main{
+    height: calc(var(--vh, 1vh) * 100);
+    color: white;
+    position: relative;
+}
+
+main > div{
+    width: 100%;
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    z-index: 2;
+}
+
+main h2{
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+main h2 br{
+    display: none;
+}
+
+main p{
+    font-size: 28px;
+}
+
+main p br{
+    display: none;
+}
+
+main p:last-of-type{
+    display: none;
+}
+
+.main_slider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.main_slider li{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    font-size: 0;
+}
+
+.main_slider li:first-child, .main_slider li:last-child{
+    background: url(../img/main_1.jpg) no-repeat center top/cover;
+}
+
+.main_slider li:nth-child(2){
+    background: url(../img/main_2.jpg) no-repeat center bottom/cover;
+}
+
+.main_slider li:nth-child(3){
+    background: url(../img/main_3.jpg) no-repeat center center/cover;
+}
+
+/*************************************** 보증 ***************************************/
+
+.warranty{
+    position: relative;
+    background: transparent;
+}
+
+.bg_layer{
+    width: 100%;
+    height: 100%;
+    background: url(../img/roof_view.jpg) no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    font-size: 0;
+}
+
+.black_area{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.black_area ul{
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.black_area ul li{
+    padding: 60px 0;
+    height: 20%;
+    display: flex;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.black_area ul li img{
+    width: 70px;
+}
+
+.warranty h3{
+    display: inline-block;
+    width: 65%;
+    color: white;
+    text-align: center;
+}
+
+/*************************************** 검색 ***************************************/
+
+.search{
+    padding: 50px 0;
+}
+
+.form_wrap{
+    width: 100%;
+    border: 2px solid #333;
+    padding: 20px 0;
+    margin: 50px auto 0 auto;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 870px;
+    margin: 0 auto;
+}
+
+form select{
+    width: 250px;
+    height: 30px;
+    margin: 10px 20px;
+}
+
+form input:first-of-type{
+    margin-left: 20px;
+}
+
+form label{
+    padding: 0 5px;
+    font-weight: 700;
+}
+
+form input:last-of-type{
+    width: 100px;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 20px;
+    background: orange;
+    cursor: pointer;
+}
+
+.ms_wrap{
+    max-width: 1300px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.mini_slider{
+    margin: 30px auto;
+    position: relative;
+}
+
+.mini_slider ul{
+    height: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mini_slider ul li{
+    width: 20%;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    transition: 0.4s;
+}
+
+.mini_slider ul li img{
+    width: 150px;
+}
+
+.prev_btn{
+    left: -25px;
+    background: url(../img/arrow_left.png) no-repeat center center/contain;
+}
+
+.next_btn{
+    right: -25px;
+    background: url(../img/arrow_right.png) no-repeat center center/contain;
+}
+
+.prev_btn, .next_btn{
+    width: 25px;
+    height: 30px;
+    position: absolute;
+    font-size: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/*************************************** 매물 ***************************************/
+
+.recommand{
+    padding-bottom: 50px;
+}
+
+.recommand h3{
+    padding-top: 50px;
+}
+
+.recommand_list{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.recommand_list > div{
+    width: 24%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+}
+
+.like{
+    height: 40px;
+    position: relative;
+}
+
+.h_area{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.h_area.click{
+    background: black;
+}
+
+.h_area img{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.r_photo{
+    height: calc(40% - 40px);
+}
+
+.r_photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.r_text {
+    height: 50%;
+}
+
+.recommand h4{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Cormorant SC', serif;
+}
+
+.recommand h5{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.r_text table{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.r_text table th{
+    padding: 10px 0;
+    text-align: left;
+}
+
+.r_text table td{
+    text-align: right;
+}
+
+.showroom{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 12px;
+    margin-top: 60px;
+    padding-top: 10px;
+    border-top: 2px solid #666;
+}
+
+/*************************************** 트레이드인 ***************************************/
+
+.trade_in{
+    height: calc(var(--vh, 1vh) * 100);
+    background: url(../img/mini_trade.jpg) no-repeat center center/cover;
+    position: relative;
+}
+
+.white_bg{
+    width: 90%;
+    max-width: 1200px;
+    padding: 50px 10px;
+    background: rgba(255,255,255,0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.white_bg h2{
+    font-weight: 600;
+    position: relative;
+}
+
+.white_bg h2::after{
+    content: "";
+    width: 1px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 25px);
+    transform: translateX(-50%);
+}
+
+.white_bg h2 br{
+    display: none;
+}
+
+.white_bg h3{
+    margin-top: 150px;
+}
+
+.contact{
+    padding-top: 90px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact a{
+    display: block;
+}
+
+.contact img{
+    width: 70px;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.contact img:hover{
+    transform: scale(1.1);
+}
+
+.contact p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+
+/*************************************** 위치 ***************************************/
+
+.location{
+    font-size: 0;
+}
+
+.location h3{
+    padding: 100px 0 30px 0;
+    text-align: center;
+}
+
+.location h3 br{
+    display: none;
+}
+
+.map_area{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.map{
+    width: 345px;
+    height: 485px;
+    background: url(../img/map.png) no-repeat center center/contain;
+    position: relative;
+    margin: 50px 20px 50px auto;
+}
+
+.map img{
+    position: absolute;
+    transform: scale(0.6);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.map img:hover{
+    transform: scale(0.7);
+}
+
+.pin1{
+    top: 8%;
+    left: 26%;
+}
+
+.pin2{
+    top: 12%;
+    left: 35%;
+}
+
+.pin3{
+    top: 32%;
+    left: 35%;
+}
+
+.pin4{
+    top: 43%;
+    left: 62%;
+}
+
+.pin5{
+    top: 58%;
+    left: 20%;
+}
+
+.showroom_info{
+    display: inline-block;
+    width: 50%;
+    padding: 50px 0 0 20px;
+    font-size: 16px;
+}
+
+.showroom_info > ul{
+    width: 100%;
+    max-width: 450px;
+}
+
+.exp{
+    display: none;
+}
+
+.exp:last-child{
+    display: inherit;
+    text-align: center;
+}
+
+.exp p{
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.exp li{
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    position: relative;
+}
+
+.exp li span{
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.exp li span:last-child{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    width: fit-content;
+    right: 0;
+    background: url(../img/small_arrow.png) no-repeat 86% 30%;
+    background-size: 6%;
+    transition: 0.4s;
+}
+
+.exp li span:last-child:hover{
+    background-position-x: 96%;
+}
+
+.exp li span:last-child a{
+    display: block;
+    padding-right: 20px;
+}
+
+/*************************************** footer ***************************************/
+
+footer{
+    background: white;
+    border-top: 2px solid #666;
+    padding: 20px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+}
+
+.sns, .ft_info{
+    font-size: 0;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.sns li{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.sns li:last-child{
+    margin-right: 0;
+}
+
+.sns li img{
+    height: 20px;
+}
+
+.ft_info{
+    margin-top: 20px;
+}
+
+.ft_info li{
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 12px;
+    position: relative;
+}
+
+.ft_info li::after{
+    content: "";
+    width: 2px;
+    height: 12px;
+    background: black;
+    position: absolute;
+    right: -15px;
+}
+
+.ft_info li:last-child{
+    margin-right: 0;
+}
+
+.ft_info li:last-child::after{
+    display: none;
+}
+
+footer h1{
+    width: fit-content;
+    margin: 10px auto;
+}
+
+footer h1 img{
+    width: 90px;
+}
+
+address{
+    font-size: 14px;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.copy{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/*************************************** 1300px ***************************************/
+/*************************************** 1300px  ***************************************/
+/*************************************** 1300px ***************************************/
+
+@media screen and (max-width: 1300px){
+    header h1{
+        display: none;
+    }
+
+    main p{
+        font-size: 24px;
+    }
+
+    main p br{
+        display: inherit;
+    }
+}
+
+/*************************************** 1024px ***************************************/
+/*************************************** 1024px ***************************************/
+/*************************************** 1024px ***************************************/
+
+@media screen and (max-width: 1024px) {
+
+/*************************************** main ***************************************/
+
+    nav > ul > li{
+        margin-right: 35px;
+    }
+
+    nav > ul > li > span{
+        font-size: 16px;
+    }
+
+    main > div{
+        padding-left: 20px;
+    }
+
+    .main_slider li:first-child, .main_slider li:last-child{
+        background-position-x: 30%;
+        background-size: auto 150%;
+    }
+
+    .sub_menu li{
+        font-size: 14px;
+    }
+
+/*************************************** warranty ***************************************/
+
+    .warranty h3{
+        text-align: right;
+    }
+
+    .bg_layer{
+        background-position-x: 0;
+    }
+
+    .black_area ul li{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .black_area ul li img{
+        width: 50px;
+        margin-bottom: 15px;
+    }
+
+    .black_area ul li p{
+        font-size: 20px;
+    }
+
+/*************************************** 검색 ***************************************/
+
+    form{
+        width: 580px;
+    }
+
+    form select{
+        width: 250px;
+    }
+
+    form input:last-of-type{
+        margin-left: 0;
+        margin-top: 20px;
+        width: 300px;
+        margin-left: calc((100% - 300px) / 2);
+    }
+
+    .mini_slider ul li{
+        width: 25%;
+    }
+
+/*************************************** 추천 ***************************************/
+
+    .recommand_list > div{
+        width: 50%;
+    }
+}
+
+/*************************************** 768px ***************************************/
+/*************************************** 768px ***************************************/
+/*************************************** 768px ***************************************/
+
+@media screen and (max-width: 768px){
+
+/*************************************** 모바일 버튼 ***************************************/
+
+    .mobile_btn{
+        display: inherit;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        transform: rotate(0deg); /* toggle시 다시 돌아올 각도 */
+        margin-right: 20px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .mobile_btn.click{
+        transform: rotate(-360deg);
+        width: 25px;
+        height: 25px;
+        background: url(../img/x.png) no-repeat center center/contain;
+    }
+
+    .mobile_btn p{
+        width: 100%;
+        height: 3px;
+        background: white;
+    }
+
+    .mobile_btn p:first-child{
+        margin: 3px 0 0 0;
+    }
+
+    .mobile_btn p:nth-child(2){
+        margin: 5px 0;
+    }
+
+    .mobile_btn p.click{
+        display: none;
+    }
+
+/*************************************** main ***************************************/
+
+    header{
+        z-index: 3;
+    }
+
+    header h1{
+        display: inherit;
+        left: 20px;
+    }
+
+    nav{
+        width: 0;
+        height: 100vh;
+        background: black;
+        position: absolute;
+        left: 100%;
+        bottom: 0;
+        transition: 0.4s;
+    }
+
+    nav.current{
+        width: 50%;
+        left: 50%;
+    }
+
+    nav.top_zero{
+        top: 0; /* nav바 header 기준으로 top: 0 */
+    }
+    
+    nav > ul{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav > ul > li{
+        display: block;
+        width: 100%;
+        height: fit-content;
+        text-align: right;
+    }
+
+    nav > ul > li span{
+        font-size: 0;
+        line-height: 80px;
+        transition: 0.4s
+    }
+
+    nav > ul > li > span.current{
+        font-size: 20px;
+        padding-right: 20px;
+    }
+
+    .sub_menu{
+        position: inherit;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+    }
+
+    .sub_menu.click{
+        height: var(--smHeight);
+        margin-bottom: 30px;
+    }
+
+    .sub_menu li{
+        display: block;
+        padding: 0;
+        line-height: 50px;
+        margin-right: 0;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    main > div{
+        width: 85%;
+        border: 1px solid white;
+        text-align: center;
+        left: 50%;
+        top: calc(50% - 50px);
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,0.5);
+        padding: 40px 0 60px 0;
+    }
+
+    main p{
+        display: none;
+    }
+
+    main p:last-of-type{
+        display: inherit;
+        font-size: 18px;
+        margin-top: 70px;
+    }
+
+    main h2 br{
+        display: inherit;
+    }
+
+    main p{
+        font-size: 18px;
+    }
+
+    .main_slider li:first-child, .main_slider li:last-child{
+        background-position-x: 20%;
+        background-size: auto 120%;
+    }
+
+/*************************************** 보증 ***************************************/
+
+    .black_area ul li p{
+        font-size: 18px;
+    }
+    
+/*************************************** 검색 ***************************************/
+
+    form{
+        width: 380px;
+    }
+
+    form select{
+        width: 150px;
+    }
+
+    .mini_slider ul li{
+        width: 33.3333%;
+    }
+
+/*************************************** trade ***************************************/
+
+    .contact p{
+        font-size: 14px;
+    }
+
+/*************************************** 매장 위치 ***************************************/
+
+    .map_area{
+        display: block;
+        width: 100%;
+    }
+
+    .map{
+        margin: 0 auto;
+    }
+
+    .showroom_info{
+        display: block;
+        width: 100%;
+        padding: 20px 0 50px 0;
+    }
+
+    .showroom_info > ul{
+        margin: 0 auto;
+    }
+
+/*************************************** footer ***************************************/
+
+    .ft_info li{
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
+
+    .ft_info li::after{
+        display: none;
+    }
+
+    .copy{
+        text-align: center;
+    }
+}
+
+/*************************************** 480px ***************************************/
+/*************************************** 480px ***************************************/
+/*************************************** 480px ***************************************/
+
+@media screen and (max-width: 480px){
+
+    header{
+        height: 60px;
+        top: calc(var(--vh, 1vh) * 100 - 60px);
+    }
+
+    header h1{
+        width: fit-content;
+        z-index: 3;
+    }
+
+    header h1 img{
+        width: 80px;
+    }
+
+    .mobile_btn{
+        top: 17px;
+    }
+
+    nav.current{
+        width: 100%;
+        left: 0;
+    }
+
+    nav > ul{
+        top: 60px;
+        height: calc(100vh - 120px);/* header 영역만큼 제외 */
+        transform: none;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    nav > ul > li{
+        text-align: center;
+    }
+
+    nav > ul > li > span.current{
+        font-size: 18px;
+        padding-right: 0;
+        line-height: 60px;
+    }
+
+    .sub_menu li{
+        text-align: center;
+        padding: 0;
+    }
+
+    main > div{
+        padding: 60px 0 80px 0;
+        top: calc(50% - 33px);
+    }
+
+    main h2{
+        margin-bottom: 0;
+    }
+
+    main p:last-of-type{
+        font-size: 11px;
+    }
+
+    .main_slider li:first-child, .main_slider li:last-child{
+        background-position-x: 25%;
+    }
+
+    .main_slider li:nth-child(3){
+        background-position-x: 70%;
+    }
+
+/*************************************** 보증 ***************************************/
+
+    .warranty h3{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .bg_layer{
+        background-position-x: 10%;
+    }
+
+    .black_area{
+        width: 100%;
+        display: block;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .black_area ul{
+        padding: 150px 0 50px 0;
+    }
+
+    .black_area ul li{
+        padding: 40px 0;
+    }
+
+    .black_area ul li p{
+        font-size: 16px;
+    }
+
+/*************************************** 검색 ***************************************/
+
+    form{
+        width: 95%;
+        justify-content: center;
+    }
+
+    form select{
+        margin: 10px 0;
+        width: 95%;
+    }
+
+    form input:first-of-type{
+        margin-left: 10px;
+    }
+
+    form input:last-of-type{
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 90%;
+    }
+
+    .mini_slider ul li{
+        width: 100%;
+    }
+
+/*************************************** 추천 ***************************************/
+
+    .recommand_list > div{
+        width: 100%;
+    }
+
+/*************************************** trade ***************************************/
+
+    .trade_in{
+        background-position-x: 75%;
+    }
+
+    .white_bg{
+        padding: 5px;
+    }
+
+    .white_bg h2::after {
+        top: calc(100% + 10px);
+    }
+
+    .white_bg h2 br{
+        display: inherit;
+    }
+
+    .white_bg h3{
+        margin-top: 130px;
+    }
+
+    .white_bg h3 br{
+        display: none;
+    }
+
+    .contact{
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .contact img{
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .contact p{
+        font-size: 12px;
+    }
+
+/*************************************** 매장 위치 ***************************************/
+
+    .location h3 br{
+        display: inherit;
+    }
+
+    .map{
+        width: 260px;
+    }
+
+    .exp p{
+        font-size: 16px;
+    }
+
+    .showroom_info{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .exp li span{
+        font-size: 14px;
+    }
+
+    .exp li span:last-child{
+        font-size: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transform: translateY(0);
+        background-position: 96% 12px;
+        background-size: 6px;
+    }
+
+    .exp li span:last-child:hover{
+        background-position-x: 100%;
+    }
+
+    .pin1{
+        top: 13%;
+        left: 23%;
+    }
+    
+    .pin2{
+        top: 17%;
+        left: 32%;
+    }
+    
+    .pin3{
+        top: 33%;
+        left: 32%;
+    }
+    
+    .pin4{
+        top: 43%;
+        left: 63%;
+    }
+    
+    .pin5{
+        top: 56%;
+        left: 15%;
+    }
+}

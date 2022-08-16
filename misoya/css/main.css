@@ -1,0 +1,942 @@
+/************************************* 헤더 *****************************************/
+
+header{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.7);
+}
+
+header h1{
+    margin-left: 50px;
+}
+
+nav{
+    width: 530px;
+    height: 100%;
+    margin-right: 50px;
+}
+
+nav > ul{
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+nav > ul > li{
+    width: 25%;
+    position: relative;
+}
+
+nav > ul > li > a{
+    line-height: 70px;
+    display: block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+nav > ul > li > a:hover{
+    border-bottom: 5px solid var(--point_color);
+}
+
+.navHover{
+    border-bottom: 5px solid var(--point_color);
+}
+
+nav > ul li a:hover{
+    color: var(--point_color);
+}
+
+.sub_menu{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background: rgba(255,255,255,0.7);
+    padding: 10px 0;
+    display: none;
+}
+
+.sub_menu li{
+    font-size: 17px;
+    bottom: 100%;
+    padding: 10px 0;
+}
+
+.sub_menu li a{
+    display: block;
+}
+
+
+.mobile_btn, .mobile_arrow, .mobile_cancel{
+    font-size: 0;
+    display: none;
+}
+
+/************************************* 메인 *****************************************/
+
+main{
+    height: calc(var(--vh, 1vh)*100);
+    background: url(../img/main_bg.jpg) no-repeat center center/cover;
+    position: relative;
+}
+
+.scroll{
+    position: absolute;
+    width: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.scroll span{
+    display: inline-block;
+    width: 50%;
+    height: 2px;
+    background: white;
+    position: relative;
+    animation: mscroll 1.5s infinite;
+    font-size: 0;
+}
+
+.scroll p:first-child span{
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+.scroll p:nth-child(2) span{
+    animation-delay: 0.15s;
+    -webkit-animation-delay: 0.15s;
+}
+
+.scroll p:last-child span{
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+}
+
+.scroll span:first-child{
+    transform: rotate(45deg);
+    left: 5px;
+}
+
+.scroll span:last-child{
+    transform: rotate(-45deg);
+    right: 5px;
+}
+
+  @keyframes mscroll {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes mscroll {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+/************************************* 브랜드 소개 *****************************************/
+
+.brand h2{
+    text-align: center;
+    position: relative;
+}
+
+.brand h4{
+    text-align: center;
+    margin: 20px 0 100px 0;
+}
+
+.brand h2 strong{
+    color: var(--point_color);
+}
+
+.brand_contents{
+    width: 95%;
+    max-width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.brand_contents a{
+    margin-bottom: 80px;
+    border-left: 10px solid black;
+    padding-left: 20px;
+}
+
+.brand_contents a:hover{
+    border-left: 10px solid var(--point_color);
+}
+
+.brand_contents a{
+    display: flex;
+}
+
+.brand_contents:nth-child(2n) a{
+    border-left: 0;
+    border-right: 10px solid black;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.brand_contents:nth-child(2n) a:hover{
+    border-right: 10px solid var(--point_color);
+}
+
+.brand_contents:last-child a{
+    margin-bottom: 0;
+}
+
+.philosophy, .ingredients_story, .owner_story{
+    width: 370px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.philosophy h3, .ingredients_story h3, .owner_story h3{
+    position: relative;
+}
+
+.philosophy h3::after, .ingredients_story h3::after, .owner_story h3::after{
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 38px)
+}
+
+.philosophy p, .ingredients_story p, .owner_story p{
+    padding-top: 80px;
+    line-height: 1.4;
+}
+
+.philosophy p:last-child, .ingredients_story p:last-child, .owner_story p:last-child{
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+    background: url(../img/arrow_right.png) no-repeat 100px 84px/contain;
+    background-size: 7px;
+    transition: 0.4s;
+}
+
+.philosophy p:last-child.hover{
+    background-position-x: 110px;
+}
+
+.brand_contents:nth-of-type(2n), .brand_contents:nth-of-type(2n) a{
+    flex-direction: row-reverse;
+}
+
+.ingredients_story h3{
+    text-align: right;
+}
+
+.ingredients_story h3::after{
+    left: calc(100% - 50PX);
+}
+
+.ingredients_story P{
+    text-align: right;
+}
+
+.ingredients_story P:last-child{
+    right: 20px;
+    background: url(../img/arrow_left.png) no-repeat 250px 84px/contain;
+    background-size: 7px;
+}
+
+.ingredients_story P:last-child.hover{
+    background-position-x: 240px;
+}
+
+.owner_story p:last-child{
+    background: url(../img/arrow_right.png) no-repeat 78px 84px/contain;
+    background-size: 7px;
+}
+
+.owner_story P:last-child.hover{
+    background-position-x: 88px;
+}
+
+/************************************* why *****************************************/
+
+.why{
+    background: url(../img/why_bg.jpg) no-repeat center center/cover;
+}
+
+.why h2 strong{
+    font-size: 72px;
+    color: var(--point_color);
+    display: block;
+}
+
+.why_title{
+    text-align: right;
+    width: 50%;
+    position: relative;
+}
+
+.why_p{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.answer{
+    position: absolute;
+    text-align: left;
+    left: 100%;
+    bottom: 0;
+    width: 95%;
+    padding-left: 20px;
+}
+
+.answer p{
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.answer strong{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.owner_answer{
+    width: 80%;
+    max-width: 1500px;
+    margin: 100px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.owner_answer > div{
+    width: 24%;
+    max-width: 350px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: rgba(242, 101, 114, 0.6);
+    padding: 20px 10px;
+    color: white;
+    position: relative;
+    background: url(../img/oa_1.jpg) no-repeat center center/cover, rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+}
+
+.owner_answer > div:nth-child(2){
+    background: url(../img/oa_2.jpg) no-repeat center center/cover, rgba(0,0,0,0.5);
+}
+
+.owner_answer > div:nth-child(3){
+    background: url(../img/oa_3.jpg) no-repeat center center/cover, rgba(0,0,0,0.5);
+}
+
+.owner_answer > div:nth-child(4){
+    background: url(../img/oa_4.jpg) no-repeat center center/cover, rgba(0,0,0,0.5);
+}
+
+.owner_answer h4 a{
+    color: white;
+}
+
+.owner_answer p:first-of-type{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.owner_answer p:first-of-type strong{
+    font-size: 17px;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+.owner_answer p:last-of-type{
+    position: absolute;
+    top: 35%;
+    padding-right: 10px;
+}
+
+/************************************* 신규매장 *****************************************/
+
+.new_store h2{
+    text-align: center;
+    color: var(--point_color);
+}
+
+.new_store h4{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.slider_wrap{
+    width: 95%;
+    max-width: 750px;
+    height: 0;
+    margin: 0 auto;
+}
+
+.business_wrap{
+    width: 95%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+/*
+slider_wrap의 높이가 정의되지 않으면 bxSlider 높이가 이상하게 적용됨. (scroll 범위를 넘어섬)
+따라서 slider_wrap의 높이는 0으로 고정(이래도 컨텐츠는 보임), business_wrap과 slider_wrap을 동일한 위치에 두고,
+business에 padding값을 %로 부여해서 요소를 슬라이더 아래로 내리며 반응형 유지.
+*/
+
+.business{
+    padding-top: calc(51% + 100px);
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.business div{
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.business div:hover{
+    transform: scale(1.05);
+}
+
+.business div img{
+    height: 40%;
+}
+
+.business div p{
+    height: 60%;
+    display: flex;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/************************************* footer *****************************************/
+
+footer{
+    text-align: center;
+    background: var(--point_color);
+    color: white;
+    padding: 25px 0;
+}
+
+.ft_info{
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 0 auto 15px auto;
+}
+
+.ft_info li{
+    margin-right: 20px;
+}
+
+.ft_info li:last-child{
+    margin-right: 0;
+}
+
+.ft_info li a{
+    color: white;
+    line-height: 1.5;
+}
+
+address span{
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 1.5;
+}
+
+address span:last-child{
+    margin-right: 0;
+}
+
+.copyright{
+    margin-top: 15px;
+}
+
+/************************************* 1024px *****************************************/
+/************************************* 1024px *****************************************/
+/************************************* 1024px *****************************************/
+
+@media screen and (max-width: 1024px) {
+
+/************************************* header *****************************************/
+
+    header h1{
+        margin-left: 20px;
+    }
+
+    nav{
+        margin-right: 20px;
+    }
+
+/************************************* 매인 *****************************************/
+
+    main{
+        background: url(../img/main_bg.jpg) no-repeat 17% center/cover;
+    }
+
+    .scroll{
+        width: 50px;
+    }
+
+    .scroll span:first-child{
+        left: 4px;
+    }
+    
+    .scroll span:last-child{
+        right: 4px;
+    }
+    
+/************************************* why *****************************************/
+
+    .owner_answer{
+        justify-content: space-around;
+    }
+
+    .owner_answer > div{
+        width: 45%;
+        height: 350px;
+        margin-bottom: 30px;
+    }
+
+    .owner_answer > div:nth-child(3), .owner_answer > div:nth-child(4){
+        margin-bottom: 0;
+    }
+}
+
+/************************************* 768px *****************************************/
+/************************************* 768px *****************************************/
+/************************************* 768px *****************************************/
+
+@media screen and (max-width: 768px) {
+
+/************************************* header, nav *****************************************/
+
+    .mobile_btn{
+        display: block;
+        width: 30px;
+        margin-right: 20px;
+    }
+
+    .mobile_btn p{
+        width: 100%;
+        height: 4px;
+        background: var(--point_color);
+        margin-bottom: 5px;
+    }
+    
+    .mobile_btn p:last-child{
+        margin-bottom: 0;
+    }
+
+    .mobile_arrow, .mobile_cancel{
+        display: block;
+        position: absolute;
+    }
+
+    .mobile_arrow p, .mobile_cancel p{
+        width: 100%;
+        height: 3px;
+        background: black;
+        position: absolute;
+    }
+
+    .mobile_arrow{
+        transform: rotate(0);
+        transition: 0.4s;
+        width: 18px;
+        height: 18px;
+        top: 31px;
+        right: 28px;
+    }
+
+    .mobile_arrow.click{
+        transform: rotate(180deg);
+    }
+
+    .mobile_arrow p:first-child{
+        transform: rotate(45deg);
+        top: 7px;
+        left: -6px;
+    }
+
+    .mobile_arrow p:last-child{
+        transform: rotate(-45deg);
+        top: 7px;
+        left: 5px;
+    }
+
+    .mobile_cancel{
+        width: 32px;
+        height: 32px;
+        top: 25px;
+        right: 23px;
+    }
+
+    .mobile_cancel p{
+        background: white;
+        top: 13px;
+    }
+
+    .mobile_cancel p:first-child{
+        transform: rotate(45deg);
+    }
+
+    .mobile_cancel p:last-child{
+        transform: rotate(-45deg);
+    }
+
+    nav{
+        position: absolute;
+        background: white;
+        width: 50%;
+        height: 100vh;
+        top: 0;
+        left: 100%;
+        border-left: 5px solid var(--point_color);
+        overflow-y: scroll;
+        transition: 0.4s;
+    }
+    
+    nav.click{
+        left: 50%;
+    }
+
+    nav ul{
+        flex-direction: column;
+        font-size: 20px;
+        text-align: left;
+        padding-left: 30px;
+        border-top: 80px solid var(--point_color);
+
+    }
+
+    nav > ul > li{
+        width: 100%;
+        position: relative;
+    }
+
+    nav > ul > li > a{
+        display: inline-block;
+    }
+
+    .sub_menu{
+        position: inherit;
+        padding-left: 20px;
+        background: none;
+        border-top: 4px solid var(--point_color);
+    }
+
+    .sub_menu li{
+        padding: 15px 0;
+    }
+
+    .sub_menu li a{
+        font-size: 18px;
+    }
+
+    .sub_menu li a br{
+        display: none;
+    }
+
+/************************************* 메인 *****************************************/
+
+    main{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+
+    /* 
+    메인 포지션이 그대로면 왜 높이가 지멋대로 높아지는가.....
+    이건 무슨 요소 기준으로 100%라는건가......
+    */
+
+    .scroll{
+        width: 40px;
+    }
+
+    .scroll span:first-child{
+        left: 3px;
+    }
+    
+    .scroll span:last-child{
+        right: 3px;
+    }
+
+/************************************* 브랜드 *****************************************/
+
+    .brand h4{
+        width: 95%;
+        margin: 20px auto 100px auto;
+    }
+
+    .brand_contents a, .brand_contents:nth-child(2n) a{
+        flex-wrap: wrap;
+        justify-content: center;
+        border: 0;
+        padding: 0;
+    }
+
+    .brand_contents a:hover, .brand_contents:nth-child(2n) a:hover{
+        border: 0;
+    }
+
+    .brand_contents img{
+        width: 300px;
+    }
+
+    .philosophy, .ingredients_story, .owner_story{
+        height: 400px;
+    }
+
+    .philosophy h3, .ingredients_story h3, .owner_story h3{
+        margin: 30px 0 85px 0;
+        text-align: center;
+    }
+
+    .philosophy h3::after, .ingredients_story h3::after, .owner_story h3::after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .philosophy p, .ingredients_story p, .owner_story p{
+        padding: 0;
+        text-align: center;
+    }
+    
+    .philosophy p:last-child, .ingredients_story p:last-child, .owner_story p:last-child{
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url(../img/arrow_right.png) no-repeat center 3px/contain;
+        background-size: 8px;
+    }
+
+    .philosophy p:last-child{
+        background-position-x: 238px;
+    }
+
+    .ingredients_story p:last-child{
+        background-position-x: 245px;
+    }
+
+    .owner_story p:last-child{
+        background-position-x: 228px;
+    }
+
+ /************************************* why *****************************************/   
+
+    .why_title{
+        width: 100%;
+        text-align: center;
+    }
+
+    .answer{
+        display: none;
+    }
+
+    .why h2 strong{
+        font-size: 64px;
+    }
+
+    .owner_answer p:last-of-type{
+        font-size: 14px;
+    }
+
+    .owner_answer p:first-of-type strong{
+        font-size: 16px;
+    }
+
+    .owner_answer p:last-of-type{
+        top: 40%;
+    }
+
+ /************************************* 신규매장 *****************************************/   
+
+    .business div p{
+        font-size: 15px;
+    }
+
+/************************************* footer *****************************************/
+
+    footer{
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .ft_info{
+        margin: 0 0 15px 0;
+    }
+}
+
+/************************************* 480px *****************************************/
+/************************************* 480px *****************************************/
+/************************************* 480px *****************************************/
+
+@media screen and (max-width: 480px) {
+
+/************************************* header, nav *****************************************/
+
+    nav{
+        width: 100%;
+        border-left: 0;
+    }
+
+    nav.click{
+        left: 0;
+    }
+
+    nav ul{
+        font-size: 20px;
+    }
+
+    .sub_menu li a{
+        font-size: 16px;
+    }
+
+
+    .mobile_cancel{
+        width: 28px;
+        right: 21px;
+    }
+
+    .mobile_arrow{
+        width: 15px;
+        height: 15px;
+        top: 32px;
+    }
+
+    .mobile_arrow p:first-child{
+        top: 5px;
+        left: -4px;
+    }
+
+    .mobile_arrow p:last-child{
+        top: 5px;
+        left: 5px;
+    }
+
+/************************************* 브랜드 *****************************************/
+
+    .brand_contents img{
+        width: 280px;
+    }
+    
+    .philosophy, .ingredients_story, .owner_story{
+        width: 100%;
+    }
+
+    .philosophy, .ingredients_story, .owner_story{
+        height: 350px;
+    }
+
+    .philosophy p, .ingredients_story p, .owner_story p{
+        font-size: 14px;
+    }
+
+    .philosophy p:last-child, .ingredients_story p:last-child, .owner_story p:last-child{
+        font-size: 15px;
+        background-size: 6px;
+        background-position-y: 4px;
+    }
+
+    .philosophy p:last-child{
+        background-position-x: calc(50% + 47px);
+    }
+
+    .ingredients_story p:last-child{
+        background-position-x: calc(50% + 54px);
+    }
+
+    .owner_story p:last-child{
+        background-position-x: calc(50% + 37px);
+    }
+    
+
+/************************************* why *****************************************/
+
+    .owner_answer > div{
+        width: 90%;
+        height: 330px;
+    }
+
+    .owner_answer > div:nth-child(3){
+        margin-bottom: 30px;
+    }
+
+    .owner_answer p:first-of-type{
+        font-size: 14px;
+    }
+
+/************************************* 신규매장 *****************************************/
+
+    section{
+        padding: 100px 0 50px 0;
+    }
+
+    .business{
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .business div{
+        height: fit-content;
+    }
+
+    .business div img{
+        width: 50px;
+        height: auto;
+    }
+
+    .business div p{
+        font-size: 14px;
+        padding: 10px 0 40px 0;
+    }
+
+    .coast p{
+        padding-bottom: 0;
+    }
+
+/************************************* footer *****************************************/
+
+    footer{
+        font-size: 12px;
+    }
+}

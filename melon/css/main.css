@@ -1,0 +1,1285 @@
+:root{
+    --nav_stick_color: black;
+}
+
+/************************************ 헤더 *****************************************/
+
+header{
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+header.scroll{
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+}
+
+header h1, nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header h1{
+    left: 30px;
+}
+
+header h1 img{
+    width: 150px;
+}
+
+nav{
+    width: fit-content;
+    right: 30px;
+    font-size: 0;
+}
+
+nav ul{
+    display: inline-block;
+    font-size: 0;
+}
+
+nav ul:first-child{
+    position: relative;
+    margin-right: 20px;
+}
+
+nav ul:first-child::after{
+    content: "";
+    width: 2px;
+    height: 14px;
+    background: var(--nav_stick_color);
+    position: absolute;
+    left: calc(100% + 9px);
+}
+
+nav ul li{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+nav ul li:last-child{
+    margin-right: 0;
+}
+
+nav ul li a.scroll{
+    color: white;
+}
+
+.mobile_btn{
+    display: none;
+}
+
+/************************************ main *****************************************/
+
+main{
+    height: calc(var(--vh, 1vh)*100);
+}
+
+.p1_vid{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -3;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+    -moz-transform: rotateY(180deg); /* Firefox */
+}
+
+.p1_text_area{
+    width: 40%;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    opacity: 1;
+    transition: 2s;
+    transition-delay: 1s;
+}
+
+.p1_text_area.default{
+    opacity: 0;
+}
+
+.ta_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ta_content img{
+    width: 100px;
+}
+
+.ta_content h3{
+    padding: 40px 0 20px 0;
+}
+
+.ta_content h5{
+    padding: 0 0 70px 0;
+}
+
+.ta_content p a{
+    margin: 10px 0;
+}
+
+/************************************ melon6 *****************************************/
+
+.melon6{
+    background: transparent;
+    position: relative;
+    height: 980px; /* 모바일 스크린 보일때까지 확보 */
+}
+
+.melon6 h2{
+    text-align: right;
+    width: 50%;
+    position: relative;
+    padding: 100px 0 100px 0;
+}
+
+.melon6 h2 strong{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+    font-size: 80px;
+    text-align: left;
+    color: #00cc33;
+}
+
+.p2_content{
+    position: absolute;/* melon6에서 높이 확보 필요 */
+    right: calc(50% - 350px);
+    width: fit-content;
+    height: 680px; /* phone frame 이미지에 맞는 높이 필요 */
+    overflow: hidden; /* 일정 구간에서 overflow: scroll로 바뀜 */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    background: url(../img/phone_frame.png) no-repeat 100% top/contain;
+}
+
+.p2_content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.p2_content li{
+    display: flex;
+}
+
+.p2_content li strong{
+    font-size: 40px;
+    color: #00cc33;
+}
+
+.p2_content li div:first-child{
+    width: calc(100% - 350px);
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.p2_content li div:first-child h3{
+    text-align: right;
+}
+
+.p2_content li div:first-child h3 span{
+    display: block;
+    font-size: 72px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.p2_content li div:first-child h5{
+    text-align: right;
+    padding-top: 50px;
+}
+
+.p2_content li div:last-child{
+    width: 350px;
+}
+
+.p2_content li div:last-child img{
+    width: 90%;
+    height: 680px;
+    display: block;
+    margin-left: 23px;
+    position: relative;
+    z-index: -1;
+}
+
+
+.sa_mobile{
+    display: none;
+}
+
+.scroll_pic{
+    position: absolute;
+    width: 52px;
+    height: 30px;
+    right: calc((350px - 52px) / 2);
+    bottom: 100px;
+}
+
+.scroll_pic p{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: white;
+    animation: spm 1.5s infinite;
+    -webkit-animation: spm 1.5s infinite;
+    -moz-animation: spm 1.5s infinite;
+    z-index: -1;
+}
+
+.scroll_pic p:first-child{
+    transform: rotate(45deg);
+}
+
+.scroll_pic p:last-child{
+    margin-left: 20px;
+    transform: rotate(-45deg);
+}
+
+@keyframes spm{
+    0% {
+      opacity: 0;
+      bottom: 50px;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      bottom: 0;
+    }
+}
+
+@-webkit-keyframes spm{
+    0% {
+      opacity: 0;
+      bottom: 50px;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      bottom: 0;
+    }
+}
+
+@-moz-keyframes spm{
+    0% {
+      opacity: 0;
+      bottom: 50px;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      bottom: 0;
+    }
+}
+
+.scroll_txt{
+    position: absolute;
+    font-size: 32px;
+    bottom: 50px;
+    right: calc((350px - 74px) / 2);;
+    color: white;
+    z-index: -1;
+}
+
+.m6_bg{ 
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+/* 
+main의 이미지 z-index가 -1이므로 melon6 섹션에 background: white를 주어야 하는데
+스크린 안의 콘텐츠가 흰 배경에 가려짐. 따라서 main 이미지 z-index: -3 으로 설정,
+흰 배경을 z-index: -2로 설정, 스크린 안의 콘텐츠를 z-index: -1로 설정.
+*/
+
+/************************************ pc melon *****************************************/
+
+.pc_melon h2{
+    text-align: center;
+    padding: 200px 0 50px 0;
+}
+
+.download_btn{
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 100px auto;
+}
+
+.download_btn p{
+    margin: 0 10px;
+}
+
+.pc_melon h5{
+    margin: 40px 0;
+}
+
+.pc_melon h5:first-of-type br{
+    display: none;
+}
+
+.theme{
+    width: 550px;
+    height: 400px;
+    margin: 0 auto 150px auto;
+    position: relative;
+}
+
+.theme img{
+    width: 150px;
+    border-radius: 10px;
+    position: absolute;
+    transition: 0.8s;
+}
+
+.theme img:first-child{
+    left: -20%;
+    top: 5%;
+}
+
+.theme img:nth-child(2){
+    left: 15%;
+    top: 26%;
+}
+
+.theme img:nth-child(3){
+    left: 36%;
+    top: 15%;
+}
+
+.theme img:nth-child(4){
+    left: 50%;
+    top: 55%;
+}
+
+.theme img:nth-child(5){
+    left: 70%;
+    top: 0%;
+}
+
+.theme img:nth-child(6){
+    left: 100%;
+    top: 19%;
+}
+
+.theme img:nth-child(7){
+    left: -15%;
+    top: 45%;
+}
+
+.theme img.default{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.player_mode{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.pm_1, .pm_2{
+    display: flex;
+    transition: 0.8s;
+}
+
+.pm_1{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    transition: 0.8s;
+}
+
+.pm_1.default{
+    width: 100%;
+}
+
+.pm_2{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.8s;
+}
+
+.pm_2.default{
+    width: 0;
+}
+
+.player_mode div img{
+    width: 90%;
+    border-radius: 10px;
+}
+
+.pm_2 img:last-child{
+    width: 50%;
+}
+
+/************************************ 차트 *****************************************/
+
+.chart{
+    height: 100vh;
+    background: url(../img/chart.jpg) no-repeat center center/cover;
+    position: relative;
+}
+
+.chart_txt.default{
+    left: -100%;
+}
+
+.chart_txt{
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: 0.8s;
+}
+
+.chart h2, .chart h5{
+    margin-bottom: 50px;
+}
+
+.chart p a{
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    font-weight: 800;
+    margin-left: -20px; /* 화살표 공간만큼 왼쪽으로 이동*/
+}
+
+.chart p a img{
+    width: 7px;
+    position: absolute;
+    margin-top: 1px;
+    right: 8px;
+    transition: 0.4s;
+}
+
+.chart p a img.hover{
+    right: 3px;
+}
+
+/************************************ 다른 콘텐츠 *****************************************/
+
+.another_content h3{
+    padding: 100px 0 50px 0;
+}
+
+.new_album, .melon_magazine{
+    position: relative;
+}
+
+.new_album{
+    text-align: left;
+}
+
+.new_album::after{
+    content: "";
+    width: calc(100% - 100px);
+    height: 4px;
+    background: #00cc33;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.album_slider{
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.album_slider ul li{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.album_slider ul li img{
+    width: 250px;
+    margin: 0 10px;
+}
+
+.play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 250px;
+    background: url(../img/play.png) no-repeat center center/contain;
+    font-size: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.play a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.play:hover{
+    opacity: 1;
+}
+
+.melon_magazine{
+    text-align: right;
+}
+
+.melon_magazine::before{
+    content: "";
+    width: calc(100% - 130px);
+    height: 4px;
+    background: #00cc33;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.magazine_area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.magazine_area li{
+    width: 30%;
+}
+
+.magazine_area a{
+    display: block;
+}
+
+
+.magazine_pic{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.magazine_pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.magazine_area{
+    padding: 50px 0;
+}
+
+.magazine_area h6, .magazine_area p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.magazine_area h6{
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.magazine_area p{
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.magazine_area span{
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 10px;
+    color: #00cc33;
+    margin-bottom: 25px;
+}
+
+.magazine_area span:last-child{
+    color: black;
+    margin-right: 0;
+}
+
+.etc{
+    display: flex;
+    width: 100%;
+    padding-bottom: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: space-between;
+}
+
+.etc li:first-child{
+    font-size: 23px;
+    font-weight: 800;
+    text-align: left;
+    padding-right: 30px;
+}
+
+.etc li{
+    text-align: right;
+}
+
+.etc li a:hover{
+    color: #00cc33;
+}
+
+/************************************ footer *****************************************/
+
+footer{
+    padding: 30px 0;
+    border-top: 1px solid #333;
+}
+
+.terms{
+    font-size: 0;
+    width: fit-content;
+    padding: 0 0 10px 0;
+    margin: 0 auto;
+}
+
+.terms li{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+
+address{
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+address span{
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+footer p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/************************************ 1024px *****************************************/
+/************************************ 1024px *****************************************/
+/************************************ 1024px *****************************************/
+
+@media screen and (max-width: 1024px) {
+
+/************************************ header *****************************************/
+
+    header h1{
+        left: 20px;
+    }
+
+    nav{
+        right: 20px;
+    }
+
+    nav ul li{
+        font-size: 14px;
+    }
+
+    .p1_text_area{
+        width: 50%;
+    }
+
+/************************************ 멜론6 *****************************************/
+
+    .melon6 h2 strong{
+        font-size: 60px;
+    }
+
+    .p2_content li strong{
+        font-size: 36px;
+        color: #00cc33;
+    }
+
+    .p2_content li div:first-child{
+        padding-right: 0;
+    }
+
+    .p2_content li div:first-child h3 span{
+        font-size: 52px;
+    }
+
+/************************************ pc 멜론 *****************************************/
+
+    .theme{
+        width: 460px;
+    }
+
+    .theme img{
+        width: 140px;
+    }
+
+    .player_mode{
+        width: 95%;
+    }
+
+
+    .magazine_area li{
+        width: 32%;
+    }
+
+/************************************ 컨텐츠 *****************************************/
+
+    .etc li:first-child{
+        font-size: 21px;
+    }
+
+/************************************ footer *****************************************/
+
+    .terms, address{
+        margin: 0 auto 0 0;
+    }
+}
+
+/************************************ 768px *****************************************/
+/************************************ 768px *****************************************/
+/************************************ 768px *****************************************/
+
+@media screen and (max-width: 768px) {
+
+/************************************ header *****************************************/
+
+    .mobile_btn{
+        display: inherit;
+        width: 25px;
+        font-size: 0;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .mobile_btn p{
+        width: 100%;
+        height: 2px;
+        margin-bottom: 5px;
+        background: black;
+        transition: 0.4s;
+    }
+
+    .mobile_btn p:last-child{
+        margin-bottom: 0;
+    }
+
+    .mobile_btn p.scroll{
+        background: white;
+    }
+
+    .mobile_btn p.click{
+        margin-bottom: 0;
+        margin-top: 8px;
+        position: absolute;
+        background: white;
+    }
+
+    .mobile_btn p:first-child.click{
+        transform: rotate(-45deg);
+    }
+
+    .mobile_btn p:nth-child(2).click{
+        transform: rotate(45deg);
+    }
+
+    .mobile_btn p:last-child.click{
+        opacity: 0;
+    }
+
+    header.click{
+        background: rgba(0,0,0,0.8);
+    }
+
+    nav{
+        width: 100%;
+        right: 0;
+        text-align: right;
+        top: 100%;
+        transform: none;
+        height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+    }
+
+    nav.click{
+        padding: 10px 0 30px 0;
+        background: rgba(0,0,0,0.8);
+    }
+
+    nav ul li a.click{
+        color: white;
+    }
+
+    nav.scroll{
+        background: rgba(0,0,0,0.8);
+    }
+
+    nav ul:last-child{
+        margin-right: 20px;
+    }
+
+/************************************ 메인 *****************************************/
+
+    main{
+        flex-direction: column;
+    }
+
+    .p1_text_area{
+        width: 70%;
+        height: 80%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .ta_content img{
+        width: 80px;
+    }
+
+    .ta_content h3{
+        padding: 30px 0 20px 0;
+    }
+
+    .ta_content h5{
+        padding: 0 0 50px 0;
+    }
+
+    .ta_content p{
+        padding: 0 5px;
+    }
+
+/************************************ 멜론 6 *****************************************/
+
+    .melon6{
+        height: 1025px;
+    }
+
+    .melon6 h2{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .melon6 h2 strong{
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .p2_content{
+        width: 350px;
+        height: 700px;
+        right: calc((100% - 350px) / 2);
+        background: url(../img/phone_frame.png) no-repeat 100% top/cover;
+    }
+
+    .p2_content li{
+        display: inherit;
+    }
+
+    .p2_content li div:first-child{
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .p2_content li:first-child div:first-child{
+        height: 700px;
+    }
+
+    .p2_content li div:first-child h3{
+        position: relative;
+        z-index: -1;
+        text-align: center;
+        width: 60%;
+        line-height: 1.5;
+    }
+
+    .p2_content li div:first-child h3 span{
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 50px;
+    }
+
+    .p2_content li div:first-child h3 strong{
+        display: block;
+    }
+
+    .p2_content li div:first-child h5{
+        width: 70%;
+        text-align: center;
+    }
+
+    .p2_content li div:first-child h5 br{
+        display: none;
+    }
+
+    .p2_content li:first-child div:last-child{
+        display: none;
+    }
+
+    .p2_content li div:last-child img{
+        height: 700px;
+        margin: 0 auto;
+    }
+
+    .sa_pc{
+        display: none;
+    }
+
+    .sa_mobile{
+        display: inherit;
+    }
+
+    .scroll_pic {
+        width: 43px;
+        right: calc((350px - 43px) / 2);
+    }
+
+    .scroll_pic p{
+        background: black;
+        width: 25px;
+    }
+
+    .scroll_pic p:last-child{
+        margin-left: 17px;
+    }
+
+    .scroll_txt{
+        color: black;
+        font-size: 28px;
+        right: calc((350px - 70px) / 2);
+    }
+
+/************************************ pc 멜론 *****************************************/
+
+    .theme{
+        width: 250px;
+    }
+
+    .theme img{
+        width: 100px;
+    }
+
+/************************************ 컨텐츠 *****************************************/
+
+    .album_slider{
+        height: 300px;
+    }
+
+    .album_slider ul li img{
+        width: 200px;
+    }
+
+    .play{
+        width: 200px;
+        height: 200px;
+    }
+
+    .magazine_area{
+        justify-content: space-around;
+    }
+
+    .magazine_area li{
+        width: 48%;
+    }
+
+    .etc{
+        flex-wrap: wrap;
+    }
+
+    .etc li:first-child{
+        padding-right: 0;
+        width: 100%;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+}
+
+/************************************ 480px *****************************************/
+/************************************ 480px *****************************************/
+/************************************ 480px *****************************************/
+
+@media screen and (max-width: 480px) {
+
+/************************************ header *****************************************/
+
+    header h1 img{
+        width: 100px;
+    }
+
+    nav.click{
+        padding: 15px 0 65px 0;
+    }
+
+    nav ul{
+        display: block;
+    }
+
+    nav ul:first-child{
+        margin-bottom: 20px;
+    }
+
+    nav ul:first-child::after{
+        display: none;
+    }
+
+    nav ul li{
+        margin-right: 20px;
+    }
+
+/************************************ 메인 *****************************************/
+
+    .p1_text_area{
+        width: 90%;
+        border-radius: 20px;
+        right: unset;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ta_content img{
+        width: 70px;
+    }
+
+    .ta_content p{
+        display: block;
+    }
+
+/************************************ 멜론 6 *****************************************/
+
+    .melon6{
+        height: 880px;
+    }
+
+    .melon6 h2{
+        padding-bottom: 80px;
+    }
+
+    .melon6 h2 strong{
+        font-size: 50px;
+    }
+
+    .p2_content{
+        width: 280px;
+        height: 566px;
+        right: calc((100% - 280px) / 2);
+    }
+
+    .p2_content li:first-child div:first-child{
+        height: 566px;
+    }
+
+    .p2_content li div:first-child h3{
+        width: 80%;
+    }
+
+    .p2_content li div:first-child h5{
+        padding-bottom: 50px;
+    }
+
+    .p2_content li div:last-child{
+        width: 280px;
+    }
+
+    .p2_content li div:last-child img{
+        height: 566px;
+    }
+
+    .scroll_pic {
+        width: 35px;
+        right: calc((280px - 35px) / 2);
+        bottom: 90px;
+    }
+
+    .scroll_pic p{
+        width: 20px;
+    }
+
+    .scroll_pic p:last-child{
+        margin-left: 13px;
+    }
+
+    .scroll_txt{
+        font-size: 24px;
+        right: calc((280px - 60px) / 2);
+    }    
+
+/************************************ pc 멜론 *****************************************/
+
+    .pc_melon h2{
+        padding: 100px 0 50px 0;
+    }
+
+
+    .download_btn{
+        flex-direction: column;
+    }
+
+    .download_btn p{
+        margin: 5px 0;
+    }
+
+    .pc_melon h5:first-of-type br{
+        display: inherit;
+    }
+
+    .theme{
+        width: 130px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .theme img{
+        width: 70px;
+    }
+
+    .pm_1{
+        width: 100%;
+    }
+    
+    .pm_1.default{
+        width: 60%;
+    }
+    
+    .pm_2{
+        width: 100%;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .pm_2 img:first-child{
+        width: 65%;
+    }
+
+    .pm_2 img:last-child{
+        width: 32%;
+        height: 50%;
+    }
+    
+    .pm_2.default{
+        width: 60%;
+    }
+
+/************************************ 차트 *****************************************/
+
+    .chart_txt{
+        transform: translateY(-50%);
+        background: rgba(255,255,255,0.5);
+        width: 80%;
+        padding: 40% 15px;
+    }
+
+    .chart p a{
+        font-size: 14px;
+    }
+
+    .chart p a img{
+        width: 6px;
+        margin-top: 4px;
+        right: 10px;
+    }
+
+/************************************ 컨텐츠 *****************************************/
+
+    .new_album::after{
+        width: calc(100% - 80px);
+    }
+
+    .album_slider{
+        height: 250px;
+    }
+
+    .album_slider ul li img{
+        width: 150px;
+    }
+
+    .play{
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .melon_magazine::before{
+        width: calc(100% - 103px);
+    }
+
+    .magazine_area h6{
+        font-size: 15px;
+    }
+
+    .magazine_area p{
+        font-size: 13px;
+    }
+
+    .magazine_area span{
+        font-size: 10px;
+    }
+
+    .etc{
+        font-size: 16px;
+        flex-wrap: wrap;
+    }
+
+    .etc li{
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .etc li:first-child{
+        padding-bottom: 25px;
+    }
+
+/************************************ footer *****************************************/
+
+    .terms li, address span{
+        font-size: 12px;
+    }
+
+    footer p{
+        font-size: 14px;
+    }
+}

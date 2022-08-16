@@ -1,0 +1,814 @@
+header{
+    height: 130px;
+}
+
+nav{
+    position: relative;
+}
+
+header h1, .search_border, .menu_btn_wrap, .menu_icon{
+    display: inline-block;
+}
+
+header h1:last-child{
+    display: none;
+}
+
+header h1{
+    float: left;
+    margin-top: 39px;
+}
+
+.search_border{
+    width: 300px;
+    background: linear-gradient(to right, #3c92e3, #3bcfa0);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 60px;
+}
+
+.search_border form{
+    background-color: white;
+    margin-bottom: 2px;
+}
+
+.search_border form input{
+    border: none;
+    outline: none;
+    padding: 0 0 5px 0;
+}
+
+.search_border form input:first-child{
+    width: 80%;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.search_border form img{
+    width: 20px;
+}
+
+.search_border form input:last-child{
+    width: 15%;
+    height: 20px;
+    font-size: 0;
+    background: url(../image/search.png) no-repeat center center/contain;
+    float: right;
+    cursor: pointer;
+}
+
+.menu_btn_wrap{
+    width: 104px;
+    height: 40px;
+    float: right;
+    background: linear-gradient(to right, #3c92e3, #3bcfa0);
+    border-radius: 3px;
+    margin-top: 44px;
+    cursor: pointer;
+}
+
+.menu_btn{
+    background: white;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.menu_btn > p{
+    display: inline-block;
+    color: #3c92e3;
+    height: 36px;
+    padding-top: 7px;
+}
+
+.menu_icon p{
+    height: 2px;
+    background-color: #3c92e3;
+    font-size: 0;
+    margin-bottom: 4px;
+}
+
+.menu_icon p:first-child{
+    width: 20px;
+}
+
+.menu_icon p:nth-child(2){
+    width: 16px;
+}
+
+.menu_icon p:last-child{
+    width: 12px;
+    margin-bottom: 0;
+}
+
+.tm_btn_area{
+    width: 100%;
+    height: 60px;
+    background-color: #0b4da2;
+    padding: 0 20px;
+}
+
+.tm_btn_area > a{
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.tm_btn_area > img{
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+}
+
+.total_menu{
+    background-color: white;
+    height: 100%;
+    position: fixed;
+    width: 25%;
+    z-index: 2;
+    left: 100%;
+    border-left: 3px solid #0b4da2;
+    transition: 0.4s;
+    overflow: scroll;
+}
+
+.total_menu.current{
+    left: 75%;
+}
+
+.total_menu p{
+    padding-left: 20px;
+}
+
+.total_menu ul a{
+    padding-left: 40px;
+}
+
+.total_menu ul p{
+    font-size: 20px;
+    line-height: 60px;
+    cursor: pointer;
+    position: relative;
+}
+
+.total_menu > ul > li{
+    position: relative;
+}
+
+.total_menu > ul > li > img{
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.total_menu > ul > li > img.current{
+    transform: rotate(180deg);
+}
+
+.total_menu ul p:hover, .total_menu a:hover{
+    color: #3c92e3;
+}
+
+.total_menu > ul > li ul{
+    display: none;
+}
+
+.total_menu > ul > li ul li{
+    background-color: #eee;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.total_menu > ul > li ul li:last-child{
+    border: none;
+}
+
+.total_menu ul a{
+    display: block;
+}
+
+.total_menu > p:last-child{
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*********************************** main ****************************************/
+
+main{
+    background: linear-gradient(to bottom, #3c92e3, #3bcfa0);
+    height: 1000px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.quick_menu > div{
+    width: 33.3333%;
+    height: 260px;
+    position: relative;
+    float: left;
+}
+
+.quick_menu .qmc{
+    width: 330px;
+    height: 210px;
+    background: #0b4da2;
+    border-radius: 5px;
+    text-align: center;
+    padding: 27px 0;
+    transition: 0.4s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.quick_menu .qmc.current{
+    height: 262px;
+}
+
+.quick_menu .qmc.current_bg_1{
+    background: url(../image/blue_border_box.png) no-repeat center center/contain;
+}
+
+.quick_menu .qmc.current_bg_2{
+    background: url(../image/blue_border_box_flip.png) no-repeat center center/contain;
+    padding-top: 45px;
+}
+
+
+.quick_menu .qmc h2{
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+
+.quick_menu .qmc p{
+    font-size:  14px;
+    color: white;
+}
+
+.quick_menu .qmc h2.current, .quick_menu .qmc p.current{
+    color: black;
+}/*************/
+
+.quick_menu .qmc span, .quick_menu .qmc img:nth-of-type(2){
+    display: none;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.quick_menu .qmc span.current, .quick_menu .qmc img:nth-of-type(2).current{
+    display: inline-block;
+    margin-top: 20px;
+}/*************/
+
+.quick_menu .qmc_list{
+    width: 100%;
+    height: 400px;
+    display: none;
+    flex-wrap: wrap;
+}
+
+.qmc_list > div{
+    width: 25%;
+    color: white;
+    padding: 35px 0 0 20px;
+}
+
+.qmc_list h2{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 43px;
+    position: relative;
+}
+
+.qmc_list h2 a{
+    display: block;
+    color: white;
+}
+
+.qmc_list h2 a:hover{
+    color: #3c92e3;
+}
+
+.qmc_list h2:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: white;
+    top: 42px;
+}
+
+.qmc_list h2 br{
+    display: none;
+}
+
+.qmc_list p{
+    font-size: 14px;
+}
+
+.black_bg{
+    width: 100%;
+    height: 380px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 310px;
+}
+
+
+/***************************************공지*******************************/
+
+
+.slider_area{
+    width: 95%;
+    margin: 50px auto;
+}
+
+.slider div img{
+    object-fit: cover;
+}
+
+.mobile_slider_area, .mobile_slider{
+    display: none;
+}
+
+/***************************************지도*******************************/
+
+.map_wrap > div{
+    float: left;
+}
+
+.map_wrap > div:last-child{
+    margin-bottom: 70px;
+}
+
+.selection{
+    width: 45%;
+    height: 470px;
+    background: #0b4da2;
+    position: relative;
+}
+
+.selection h2{
+    font-size: 24px;
+    color: white;
+    width: 300px;
+    background: #0b4da2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.selection h2 br{
+    display: none;
+}
+
+.sel_wrap{
+    border: 2px solid white;
+    width: 95%;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+.sel_list{
+    position: absolute;
+    width: calc(95% - 4px);
+}
+
+.sel_list ul{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.sel_list ul li{
+    float: left;
+    width: 33.3333%;
+    cursor: pointer;
+}
+
+.sel_list ul li p{
+    padding-bottom: 12px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sel_list ul li:first-child{
+    padding-top: 8px;
+}
+
+.sel_list ul li.current{
+    font-size: 16px;
+    color: white;
+}
+
+.sel_list ul li p.current{
+   border-bottom: 2px solid white;
+}
+
+.area_left, .area_right{
+    float: left;
+    font-size: 14px;
+    padding: 110px 0 0 7%;
+}
+
+.area_left{
+    width: 60%;
+}
+
+.area_righ{
+    width: 40%;
+}
+
+.sel_area{
+    display: none;
+}
+
+.sel_area ul{
+    margin-bottom: 15px;
+}
+
+.sel_area ul li{
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    height: 21px;
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+.sel_area ul li:hover, .sel_area ul li.current{
+    color: #0b4da2;
+    background: white;
+}
+
+.sel_area ul li:first-child{
+    margin-right: 10px;
+    border: none;
+    background: none;
+    cursor: inherit;
+}
+
+.sel_area ul li:first-child{
+    color: white;
+}
+
+.map{
+    width: 55%;
+}
+
+.map li{
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 1024px){
+    .search_border form{
+        display: none;
+    }
+
+    .quick_menu .qmc{
+        width: 98%;
+    }
+
+    .quick_menu .qmc.current{
+        background-size: 100% 100%;
+    }
+
+    .quick_menu .qmc h2{
+        font-size: 22px;
+    }
+
+    .quick_menu .qmc p{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .quick_menu .qmc p br{
+        display: none;
+    }
+
+    .qmc_list > div{
+        width: 33.3333%;
+    }
+
+    /***********************전체메뉴**********************/
+
+    .total_menu{
+        width: 35%;
+    }
+    
+    .total_menu.current{
+        left: 65%;
+    }
+
+    .total_menu ul a{
+        font-size: 14px;
+    }
+
+    /***********************공지**********************/
+
+    .slider_area{
+        width: 100%;
+    }
+
+    /***********************지도**********************/
+
+    .map_wrap > div{
+        float: none;
+    }
+
+    .sel_wrap{
+        margin-top: 20px;
+        height: 420px;
+    }
+
+    .selection{
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+
+    .selection h2{
+        margin-top: 5px;
+    }
+
+    .sel_list ul li p{
+        font-size: 16px;
+    }
+
+    .sel_list ul li p.current{
+        font-size: 18px;
+    }
+
+    .area_left, .area_right{
+        font-size: 16px;
+        padding-left: 30px;
+    }
+
+    .area_left{
+        width: 70%;
+    }
+
+    .area_righ{
+        width: 30%;
+    }
+
+    .sel_area ul li{
+        height: 27px;
+        width: 80px;
+        margin-right: 10px;
+        text-align: center;
+        padding-top: 2px;
+    }
+
+    .sel_area ul li:first-child{
+        width: fit-content;
+        margin-right: 20px;
+    }
+
+    .map{
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+}
+
+    
+
+@media screen and (max-width: 768px){
+    .quick_menu > div{
+        width: 50%;
+    }
+
+    .quick_menu .qmc h2{
+        font-size: 20px;
+    }
+
+    .quick_menu .qmc p{
+        width: 93%;
+    }
+
+    .qmc_list h2{
+        font-size: 16px;
+        height: 43px;
+    }
+
+    .qmc_list h2:after {
+        top: 62px;
+    }
+
+    .qmc_list h2 br{
+        display: inherit;
+    }
+
+    .qmc_list p{
+        font-size: 12px;
+    }
+
+    .qmc_list p br{
+        display: none;
+    }
+
+
+    /***********************전체메뉴**********************/
+
+
+    .total_menu{
+        width: 60%;
+    }
+    
+    .total_menu.current{
+        left: 40%;
+    }
+
+
+    /***********************공지**********************/
+
+    .slider_area, .slider{
+        display: none;
+    }
+
+    .mobile_slider_area, .mobile_slider{
+        display: inherit;
+    }
+
+    .mobile_slider_area{
+        width: 100%;
+        max-width: 640px;
+        margin: 50px auto;
+    }
+
+
+    /***********************지도**********************/
+
+
+    .selection{
+        height: 500px;
+        transition: 0.4s;
+    }
+
+    .sel_wrap{
+        padding-top: 20px;
+        height: 450px;
+        transition: 0.4s;
+
+    }
+
+    .area_left, .area_right{
+        width: 50%;
+        padding-left: 0px;
+    }
+
+    .selection h2{
+        width: 145px;
+        font-size: 20px;
+    }
+
+    .selection h2 br{
+        display: inherit;
+    }
+
+
+    .sel_area ul li{
+        text-align: center;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .sel_area ul li:nth-child(n+2).mobile{
+        display: none;
+        height: auto;
+        line-height: 40px;
+        margin-bottom: 1px;
+    }
+
+    .sel_area ul li:first-child{
+        margin: 0;
+        width: 100%;
+    }
+
+    
+
+    .sel_area ul li:first-child{
+        display: inherit;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px){
+    header h1:first-child{
+        display: none;
+    }
+    
+    header h1:last-child{
+        display: inherit;
+        margin-top: 25px;
+    }
+
+    .menu_btn_wrap{
+        width: 60px;
+    }
+
+    .menu_btn > p{
+        display: none;
+    }
+    
+    .menu_btn{
+        width: 90%;
+        height: 90%;
+        padding-top: 6px;
+    }
+
+    .quick_menu > div{
+        width: 100%;
+    }
+
+    .quick_menu .qmc_list{
+        height: 300px;
+    }
+
+    .qmc_list > div{
+        width: 50%;
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    .qmc_list h2{
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    .qmc_list h2:after {
+        display: none;
+    }
+
+    .qmc_list h2 span{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+    }
+
+    .qmc_list p{
+        display: none;
+    }
+
+    /***********************전체메뉴**********************/
+
+    .total_menu{
+        width: 100%;
+    }
+    
+    .total_menu.current{
+        left: 0%;
+    }
+
+    .total_menu p{
+        font-size: 18px;
+    }
+
+    .total_menu{
+        border-left: 0;
+    }
+
+    /***********************지도**********************/
+
+    .sel_list ul li p{
+        font-size: 14px;
+        width: 80%;
+    }
+
+    .sel_list ul li p.current{
+        font-size: 15px;
+    }
+
+    .selection{
+        height: 500px;
+    }
+
+    .selection h2{
+        font-size: 18px;
+        width: 130px;
+    }
+}

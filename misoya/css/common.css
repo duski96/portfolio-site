@@ -1,0 +1,64 @@
+:root{
+    --point_color: #f26572;
+    /*rgba(242, 101, 114, 0.7);*/
+    --mobile_arrow: rotate(180deg);
+}
+
+body{
+    line-height: 1.2;
+    font-family: 'Gothic A1', sans-serif;
+    word-break: keep-all;
+}
+
+
+section{
+    padding: 100px 0;
+}
+
+h2{
+    font-size: 48px;
+    font-weight: 800;
+}
+
+h3{
+    font-size: 34px;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.inner{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: 40px;
+    }
+    
+    h3{
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    h2{
+        font-size: 36px;
+    }
+    
+    h3{
+        font-size: 24px;
+    }
+    
+    h4{
+        font-size: 18px;
+    }
+}

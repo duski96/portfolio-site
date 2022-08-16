@@ -1,0 +1,309 @@
+body{
+    font-family: 'HCR Dotum', sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*
+.container{
+    min-width: 1200px;
+}
+*/
+
+.inner{
+    max-width: 1024px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+}
+
+
+
+/********************************푸터*****************************************/
+
+
+footer{
+    border-top: 2px solid #3c92e3;
+    padding: 20px 0;
+}
+
+.exam_venue, .tbn, .camp, .relevant_org{
+    border: 1px solid #eee;
+    font-size: 14px;
+    background: url(../image/black_arrow.png) no-repeat 95%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.exam_venue p, .tbn p, .camp p, .relevant_org p{
+    margin-left: 5px;
+    line-height: 30px;
+}
+
+.exam_venue, .exam_venue ul, .relevant_org, .relevant_org ul{
+    width: 150px;
+}
+
+.tbn, .tbn ul, .camp, .camp ul{
+    width: 100px;
+}
+
+.exam_venue ul, .tbn ul, .camp ul, .relevant_org ul{
+    border: 1px solid #eee;
+    position: absolute;
+    bottom: 30px;
+    left: -1px;
+    background: white;
+    display: none;
+    z-index: 2;
+}
+
+.exam_venue ul li, .tbn ul li, .camp ul li, .relevant_org ul li{
+    margin-left: 5px;
+    line-height: 35px;
+}
+
+.exam_venue ul a, .tbn ul a, .camp ul a, .relevant_org ul a{
+    display: block;
+}
+
+footer .eng, footer .site_map{
+    float: right;
+    width: 75px;
+    height: 30px;
+    padding-top: 4px;
+    border: 2px solid #3c92e3;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+footer .eng{
+    margin-right: 5px;
+}
+
+footer .eng a{
+    color: #3c92e3;
+}
+
+footer .site_map{
+    background-color: #3c92e3;
+}
+
+footer .site_map a{
+    color: white;
+}
+
+footer .ft_menu_1{
+    padding-top: 20px;
+}
+
+footer .ft_menu_1 li{
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+footer .ft_menu_1 li:last-child{
+    margin-right: 0;
+}
+
+footer .ft_menu_2{
+    margin: 15px 0 40px 0;
+}
+
+footer .ft_menu_2 li{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 12px;
+    position: relative;
+}
+
+footer .ft_menu_2 li::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: black;
+    left: calc(100% + 10px);
+    top: 3px
+}
+
+footer .ft_menu_2 li:first-child a{
+    color: #3c92e3;
+}
+
+footer .ft_menu_2 li:last-child::after{
+    display: none;
+}
+
+footer address{
+    text-align: center;
+    position: relative;
+}
+
+.ft_logo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ft_logo a{
+    display: block;
+}
+
+footer address p{
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 1024px){
+
+    footer .ft_menu_1, footer .ft_menu_2{
+        text-align: center;
+    }
+
+    footer .ft_menu_2{
+        margin-bottom: 20px;
+    }
+
+    footer address br{
+        display: none;
+    }
+
+    footer address span:last-of-type{
+        margin-left: 20px;
+    }
+
+    footer address p{
+        margin-top: 100px;
+    }
+
+    .ft_logo{
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .relevant_org{
+        display: none;
+    }
+
+    .exam_venue, .tbn, .camp{
+        background-position-y: 13px;
+    }
+
+    .exam_venue, .exam_venue ul{
+        width: 130px;
+    }
+    
+    .tbn, .tbn ul, .camp, .camp ul{
+        width: 90px;
+    }
+
+    .exam_venue ul a, .tbn ul a, .camp ul a{
+        font-size: 12px;
+    }
+
+    
+
+    .exam_venue p, .tbn p, .camp p{
+        font-size: 12px;
+    }
+    
+
+    footer .eng, footer .site_map {
+        width: 60px;
+        font-size: 12px;
+    }
+
+    footer .eng{
+        padding-top: 6px;
+    }
+
+    footer .site_map{
+        padding-top: 5px;
+    }
+
+
+    
+    footer .ft_menu_1 li{
+        margin-right: 15px;
+        font-size: 12px;
+    }
+
+    footer .ft_menu_2{
+        font-size: 10px;
+    }
+
+    footer .ft_menu_2{
+        margin-top: 15px;
+    }
+
+    footer .ft_menu_2 li{
+        margin-right: 10px;
+    }
+
+    footer .ft_menu_2 li::after{
+        left: calc(100% + 5px);
+    }
+
+    footer address span, footer address p{
+        font-size: 14px;
+    }
+
+    footer address span:last-of-type{
+        margin-left: 10px;
+    }
+
+    footer address p{
+        margin-top: 80px;
+    }
+
+    .ft_logo{
+        top: 32%;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+
+    .exam_venue, .tbn, .camp, footer .eng, footer .site_map{
+        display: none;
+    }
+
+    footer .ft_menu_1{
+        padding-top: 0;
+    }
+
+    footer .ft_menu_2 li{
+        line-height: 1.6;
+    }
+
+    footer .ft_menu_2 li::after{
+        top: 5px;
+    }
+
+    footer address span{
+        line-height: 1.5;
+    }
+
+    footer address br{
+        display: inherit;
+    }
+
+    .ft_logo{
+        top: 42%;
+    }
+    
+}

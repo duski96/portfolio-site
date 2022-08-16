@@ -1,0 +1,1196 @@
+/*********************************** nav ****************************************/
+
+header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 2;
+}
+
+/*********************************** nav ****************************************/
+
+nav{
+    width: 800px;
+    height: 50px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 25px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: calc(100% - 850px);
+    transition: 1s;
+    text-align: right;
+}
+
+nav.scroll{
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    transform: none;
+    margin-left: 0;
+}
+
+nav ul{
+    width: 100%;
+    max-width: 800px;
+    font-size: 0;
+    color: white;
+    display: inline-block;
+}
+
+
+nav ul li{
+    width: 25%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    display: inline-block;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+/*********************************** main ****************************************/
+
+main{
+    height: calc(var(--vh, 1vh)*100);
+    background: url(../img/main_bg.jpg) no-repeat center bottom/cover;
+    position: relative;
+}
+
+.typing{
+    font-size: 43px;
+    font-weight: 300;
+    position: absolute;
+    top: -10px;
+}
+
+.typing::after{
+    content: "";
+    width: 2px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    top: 10px;
+    margin-left: 5px;
+    animation: cb 1.5s step-end infinite;
+    -webkit-animation: cb 1.5s step-end infinite;
+    -moz-animation: cb 1.5s step-end infinite;
+    animation-delay: 2s;
+}
+
+@keyframes cb{
+    50% {opacity:0;}
+}
+
+@-webkit-keyframes cb{
+    50% {opacity:0;}
+}
+@-moz-keyframes cb{
+    50% {opacity:0;}
+}
+
+.main_sentence{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_sentence h2{
+    font-size: 36px;
+    text-align: left;
+    padding-top: 60px;
+}
+
+.main_sentence p:last-of-type{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.mouse{
+    width: 50px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.mouse p{
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wheel{
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*top: 5%;*/
+    animation: mw 2s infinite;
+    -webkit-animation: mw 2s infinite;
+    -moz-animation: mw 2s infinite;
+}
+
+@keyframes mw{
+    0%{
+        top: 5%;
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        top: 80%;
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes mw{
+    0%{
+        top: 5%;
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        top: 80%;
+        opacity:0;
+    }
+}
+@-moz-keyframes mw{
+    0%{
+        top: 5%;
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        top: 80%;
+        opacity:0;
+    }
+}
+
+/*********************************** profile ****************************************/
+
+.about h2{
+    padding: 100px 0 50px 0;
+}
+
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile_1, .profile_2{
+    width: 50%;
+}
+
+.profile_1{
+    text-align: right;
+    padding-right: 20px;
+    font-size: 0;
+}
+
+.profile_photo{
+    font-size: 0;
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background: url(../img/profile.jpg) no-repeat center center/cover;
+    vertical-align: middle;
+}
+
+.profile_2{
+    padding-left: 20px;
+}
+
+.profile_2 h3{
+    text-align: left;
+    margin: 20px 0 15px 0;
+}
+
+.profile_content > div:first-child h3{
+    margin-top: 0;
+}
+
+.profile_2 p{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.skill ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill ul li{
+    width: 20%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.skill ul li img{
+    width: 65px;
+    transition: 0.4s;
+}
+
+.skill ul li img:hover{
+    transform: scale(1.1);
+}
+
+.skill ul li div{
+    position: absolute;
+    width: 320px;
+    padding: 10px 5px;
+    background: #333;
+    border-radius: 5px;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.skill ul li div.hover{
+    opacity: 1;
+    z-index: 2;
+}
+
+.skill ul li div::before{
+    content: "";
+    position: absolute;
+    border-top: 0px solid transparent;
+    border-bottom: 10px solid #333;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*******************************************works******************************************/
+
+.works{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.works h2{
+    margin: 100px 0 80px 0;
+    padding-bottom: 0;
+    position: relative;
+
+}
+
+.works h2::after{
+    content: "";
+    width: 2px;
+    height: 50px;
+    background: black;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.work_slider{
+    width: 70%;
+    margin: 50px auto 0 auto;
+    position: relative;
+}
+
+.prev_btn, .next_btn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev_btn{
+    left: -60px;
+    background: url(../img/left_arrow.png) no-repeat center center/contain;
+}
+
+.next_btn{
+    right: -60px;
+    background: url(../img/right_arrow.png) no-repeat center center/contain;
+}
+
+.work_slider ul{
+    width: 100%;
+    padding-top: 56.25%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.work_slider ul li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border: 1px solid #eee;
+    border-radius: 30px;
+    transition: 1s;
+}
+
+.work_slider ul li:first-child{
+    background: url(../img/p1.jpg) no-repeat center center/cover;
+}
+
+.work_slider ul li:nth-child(2){
+    background: url(../img/p2.jpg) no-repeat center center/cover;
+}
+
+.work_slider ul li:nth-child(3){
+    background: url(../img/p3.jpg) no-repeat center center/cover;
+}
+
+.work_slider ul li:nth-child(4){
+    background: url(../img/p4.jpg) no-repeat center center/cover;
+}
+
+.summary{
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    position: relative;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.summary.hover{
+    opacity: 1;
+    z-index: 1;
+}
+
+.summary h3{
+    margin-bottom: 30px;
+    font-size: 42px;
+}
+
+.used{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.more{
+    margin-top: 50px;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.more:hover{
+    background: white;
+    color: black;
+}
+
+.cancel_area{
+    width: calc(100% - 4px);
+    max-width: 1296px;
+    height: 70px;
+    font-size: 0;
+    position: fixed;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    background: rgba(255,255,255,0.6);
+    display: none;
+}
+
+.cancel_btn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.cancel_btn p{
+    width: 100%;
+    height: 4px;
+    background: black;
+    position: absolute;
+    top: 17px;
+}
+
+.cancel_btn p:first-child{
+    transform: rotate(45deg);
+}
+
+.cancel_btn p:last-child{
+    transform: rotate(-45deg);
+}
+
+/* 기본 및 미니 */
+
+.work_content{
+    padding: 75px 0 50px 0;
+    width: 100%;
+    max-width: 1300px;
+    height: calc(var(--vh,1vh)*100);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 2px solid black;
+    z-index: 2;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    display: none;
+}
+
+.work_content::-webkit-scrollbar{
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.device_img{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wc_inner{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.work_content h3{
+    padding: 50px 0 30px 0;
+    line-height: 1.3;
+}
+
+.work_content h3 strong{
+    font-size: 36px;
+}
+
+.go_site{
+    font-size: 0;
+    width: 420px;
+    margin: 0 auto 90px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.go_site a, .src_code a{
+    display: block;
+    width: 200px;
+    line-height: 50px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.go_site a:hover, .src_code a:hover{
+    background: black;
+    color: white;
+}
+
+.work_content h4{
+    margin: 70px 0 20px 0;
+    text-align: left;
+}
+
+.work_content h4:first-of-type{
+    margin-top: 0;
+}
+
+.work_content p{
+    text-align: left;
+}
+
+.before_img, .after_img{
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.work_content span{
+    display: inline-block;
+}
+
+.main_color, .font{
+    width: fit-content;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main_color{
+    margin-right: 5%;
+}
+
+.main_color div{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    line-height: 70px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.mini_mc div:first-of-type{
+    background: black;
+    color: white;
+}
+
+.mini_mc div:last-of-type{
+    background: white;
+    border: 1px solid #bbb;
+}
+
+.koroad_mc br{
+    display: none;
+}
+
+.font span{
+    margin-right: 20px;
+    line-height: 70px;
+}
+
+.font span:nth-child(n+2){
+    font-size: 24px;
+}
+
+.font span:last-of-type{
+    margin-right: 0;
+}
+
+.cormorant_sc, .mini_font p{
+    font-family: 'Cormorant SC', serif;
+}
+
+.noto_serif_kr{
+    font-family: 'Noto Serif KR', serif;
+}
+
+.noto_sans_kr{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.font p{
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.mini_font p:first-of-type{
+    font-size: 72px;
+}
+
+.mini_font p:nth-of-type(2){
+    font-size: 28px;
+}
+
+.mini_font p:nth-of-type(3){
+    font-size: 18px;
+}
+
+.after_img{
+    margin-bottom: 30px;
+}
+
+/* 멜론 */
+
+.melon_mc div:first-of-type{
+    background: #00cc33;
+    color: white;
+}
+
+.melon_mc div:last-of-type{
+    background: white;
+    border: 1px solid #bbb;
+}
+
+.nanum_gothic, .melon_font, .koroad_font{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.melon_font p:first-of-type{
+    font-size: 42px;
+}
+
+.melon_font p:nth-of-type(2){
+    font-size: 34px;
+}
+
+.melon_font p:nth-of-type(3){
+    font-size: 24px;
+}
+
+.melon_font p:nth-of-type(4){
+    font-size: 18px;
+}
+
+/* 미소야 */
+
+.misoya_mc div:first-of-type{
+    background: #f26572;
+    color: white;
+}
+
+.misoya_mc div:last-of-type{
+    background: white;
+    border: 1px solid #bbb;
+}
+
+.gothc_a1, .misoya_font{
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.misoya_font p:first-of-type{
+    font-size: 42px;
+}
+
+.misoya_font p:nth-of-type(2){
+    font-size: 34px;
+}
+
+.misoya_font p:nth-of-type(3){
+    font-size: 24px;
+}
+
+.misoya_font p:nth-of-type(4){
+    font-size: 18px;
+}
+
+/* 도로교통공단 */
+
+.koroad_mc div:first-of-type{
+    background: #3c92e3;
+    color: white;
+}
+
+.koroad_mc div:nth-of-type(2){
+    background: #3bcfa0;
+    color: white;
+}
+
+.koroad_mc div:last-of-type{
+    background: white;
+    border: 1px solid #bbb;
+}
+
+.koroad_font p:first-of-type{
+    font-size: 24px;
+}
+
+.koroad_font p:nth-of-type(2){
+    font-size: 18px;
+}
+
+.koroad_font p:nth-of-type(3){
+    font-size: 13px;
+}
+
+/*******************************************contact******************************************/
+
+.contact{
+    text-align: center;
+    font-size: 0;
+    padding-top: 100px;
+}
+
+.contact h2{
+    display: inline-block;
+    width: 50%;
+    font-size: 60px;
+    text-align: right;
+    vertical-align: top;
+    padding: 0 20px 0 0;
+}
+
+.contact_content{
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding-left: 20px;
+}
+
+.contact h5{
+    padding: 50px 0;
+}
+
+.contact h5 br{
+    display: none;
+}
+
+/*******************************************footer******************************************/
+
+footer{
+    border-top: 1px solid lightgray;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    background: white;
+}
+
+footer a{
+    display: block;
+    width: 100px;
+    height: 50px;
+    background: url(../img/git.png) no-repeat center center/cover;
+    font-size: 0;
+    margin: 0 auto 20px auto;
+}
+
+/*******************************************1024px******************************************/
+/*******************************************1024px******************************************/
+/*******************************************1024px******************************************/
+
+@media screen and (max-width: 1024px) {
+/*********************************** nav ****************************************/
+
+    nav{
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+        transition: 1s;
+    }
+    
+    nav.scroll{
+        width: 100%;
+        transform: none;
+        margin: 0 auto; /* 원래 margin-left: 0 이어서 이 코드가 없으면 nav가 부자연스럽게 변함 */
+    }
+
+    nav ul{
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li{
+        width: fit-content;
+        font-size: 22px;
+    }
+
+/*********************************** main ****************************************/
+
+    .typing{
+        font-size: 34px;
+        top: 0;
+    }
+
+    .typing::after{
+        height: 34px;
+        top: 7px;
+    }
+
+    .main_sentence h2{
+        font-size: 28px
+    }
+
+    .main_sentence p:last-of-type{
+        font-size: 16px;
+    }    
+
+/*********************************** about ****************************************/
+
+    .profile_1{
+        width: 60%;
+    }
+
+    .profile_2{
+        width: 40%;
+    }
+
+    .profile_2 p{
+        font-size: 16px;
+    }
+
+    .skill ul{
+        width: 90%;
+    }
+
+    .skill ul li div{
+        width: 200px;
+    }
+
+/*********************************** works ****************************************/
+
+    .work_slider{
+        width: 80%;
+    }
+
+    .summary h3{
+        font-size: 36px;
+    }
+
+    .more{
+        margin-top: 20px;
+    }
+
+    .wc_inner{
+        width: 85%;
+    }
+
+/*********************************** contact ****************************************/
+
+    .contact h2{
+        font-size: 50px;
+    }
+
+    .contact_content{
+        font-size: 28px;
+    }
+}
+
+/*********************************** 768px ****************************************/
+/*********************************** 768px ****************************************/
+/*********************************** 768px ****************************************/
+
+@media screen and (max-width: 768px) {
+
+/*********************************** nav, main ****************************************/
+
+    main{
+        background-position-x: 40%;
+    }
+
+    nav ul li{
+        font-size: 20px;
+    }
+
+    .main_sentence{
+        width: 385px;
+    }
+
+/*********************************** about ****************************************/
+
+    .skill ul li{
+        width: 33.3333%;
+    }
+
+    .skill ul li img{
+        transform: scale(0.9);
+    }
+
+    .skill ul li div{
+        width: 180px;
+    }
+
+/*********************************** works ****************************************/
+
+    .prev_btn, .next_btn{
+        width: 40px;
+    }
+
+    .prev_btn{
+        left: 10px;
+    }
+
+    .next_btn{
+        right: 10px;
+    }
+
+    .work_slider{
+        width: 95%;
+    }
+
+    .summary h3{
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .summary_txt{
+        font-size: 14px;
+    }
+
+    .used{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .more{
+        font-size: 16px;
+        padding: 5px 15px;
+        margin-top: 15px;
+    }
+
+    .cancel_area{
+        height: 60px;
+    }
+
+    .cancel_btn{
+        width: 35px;
+    }
+
+    .work_content h3 strong{
+        font-size: 33px;
+    }
+
+    .wc_inner{
+        width: 90%;
+    }
+
+    .wc_inner p{
+        font-size: 14px;
+    }
+
+   .mini_font span:nth-child(n+2){
+        font-size: 17px;
+        margin-right: 10px;
+   }
+
+/*********************************** contact ****************************************/
+
+    .contact h2{
+        font-size: 40px;
+    }
+
+    .contact_content{
+        font-size: 22px;
+    }
+
+    .contact h4 br{
+        display: inherit;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+/*********************************** nav, main ****************************************/
+
+    nav{
+        width: 98%;
+    }
+
+    nav ul li{
+        font-size: 17px;
+    }
+
+    .typing{
+        font-size: 24px;
+        top: 15px;
+    }
+
+    .typing::after{
+        height: 24px;
+        top: 5px;
+    }
+
+    .main_sentence{
+        width: 270px;
+    }
+
+    .main_sentence h2{
+        font-size: 20px;
+    }
+
+    .main_sentence p:last-of-type{
+        font-size: 14px;
+    }
+
+    .mouse{
+        width: 40px;
+        height: 60px;
+        bottom: 15px;
+    }
+
+    .mouse p{
+        font-size: 12px;
+        top: -50%;
+    }
+
+    .wheel{
+        width: 8px;
+        height: 8px;
+    }
+    
+/*********************************** about ****************************************/
+
+    .profile_1, .profile_2{
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile_photo{
+        width: 95%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile_2 p{
+        font-size: 14px;
+    }
+
+    .profile_content, .profile_content h3{
+        text-align: center;
+    }
+
+    .profile_content h3{
+        margin-top: 40px;
+    }
+
+    .skill ul li{
+        width: 50%;
+    }
+
+    .skill ul li div{
+        width: 160px;
+    }
+
+    .skill ul li div span{
+        font-size: 14px
+    }
+
+/*********************************** works ****************************************/
+
+    .prev_btn, .next_btn{
+        width: 35px
+    }
+
+    .work_slider{
+        width: 95%;
+    }
+
+    .summary h3{
+        font-size: 24px;
+    }
+
+    .summary_txt{
+        display: none;
+    }
+
+    .used{
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .cancel_btn{
+        width: 30px;
+    }
+
+    .wc_inner{
+        width: 95%;
+    }
+
+    .go_site{
+        flex-direction: column;
+        width: fit-content;
+        height: 115px;
+    }
+
+    .go_site a, .src_code a{
+        font-size: 16px;
+    }
+
+    .work_content h3 strong{
+        font-size: 28px;
+    }
+
+    .main_color, .font{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main_color{
+        margin-bottom: 30px;
+    }
+
+    .font span{
+        line-height: 1;
+    }
+
+    .font p{
+        text-align: center;
+    }
+
+    .font p:first-of-type{
+        margin-top: 30px;
+    }
+
+    .koroad_mc br{
+        display: inherit;
+    }
+
+    .koroad_mc div:first-of-type{
+        margin-left: 0;
+    }
+
+/*********************************** contact ****************************************/
+
+    .contact h2, .contact_content{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact h2{
+        margin-bottom: 30px;
+        font-size: 34px;
+    }
+
+    .contact_content{
+        font-size: 20px;
+    }
+
+/*********************************** footer ****************************************/
+
+    footer{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,109 @@
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    overflow-x: hidden;
+}
+
+.container{
+    overflow: hidden;
+}
+
+h2, h3, h4, h5{
+    line-height: 1.3;
+    text-align: center;
+    word-break: keep-all;
+}
+
+h2{
+    font-size: 42px;
+    font-weight: 800;
+}
+
+h3{
+    font-size: 34px;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h5{
+    font-size: 18px;
+}
+
+section, footer{
+    background: white;
+}
+
+.green_btn{
+    font-size: 17px;
+    font-weight: 700;
+    width: 250px;
+    line-height: 50px;
+    border: 2px solid #00cc33;
+    border-radius: 50px;
+    text-align: center;
+    display: block;
+    transition: 0.2s;
+}
+
+.green_btn:hover{
+    background: #00cc33;
+    color: white;
+}
+
+.inner{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    h2{
+        font-size: 34px;
+    }
+    
+    h3{
+        font-size: 30px;
+    }
+    
+    h4{
+        font-size: 22px;
+    }
+    
+    h5{
+        font-size: 16px;
+    }
+
+    .green_btn{
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    h2{
+        font-size: 28px;
+    }
+    
+    h3{
+        font-size: 24px;
+    }
+    
+    h4{
+        font-size: 18px;
+    }
+    
+    h5{
+        font-size: 14px;
+    }
+
+    .green_btn{
+        font-size: 15px;
+    }
+    
+}

@@ -1,0 +1,89 @@
+body {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    word-break: keep-all;
+}
+
+.container{
+    overflow-x: hidden;
+    /* body에 주면 오른쪽 여백이 생기는데 container에 주면 안생김 */
+}
+
+.clearfix{
+    content: "";
+	display: block;
+	clear: both;
+}
+
+h2, h3, h4, h5{
+    text-align: center;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 48px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+h4{
+    font-size: 22px;
+}
+
+h5{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+p, span{
+    line-height: 1.5;
+}
+
+
+@media screen and (max-width: 1024px) {
+    h2{
+        font-size: 36px;
+    }
+    
+    h3{
+        font-size: 28px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
+
+    h5{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: 32px;
+    }
+    
+    h3{
+        font-size: 24px;
+    }
+
+    h4{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2{
+        font-size: 28px;
+    }
+    
+    h3{
+        font-size: 20px;
+    }
+
+    h5{
+        font-size: 16px;
+    }
+}
