@@ -212,7 +212,8 @@ main{
 .profile_photo{
     font-size: 0;
     display: inline-block;
-    width: 500px;
+    width: 95%;
+    max-width: 500px;
     height: 500px;
     border: 2px solid #ddd;
     border-radius: 5px;
@@ -1066,9 +1067,8 @@ footer a{
     }
 
     .profile_photo{
-        width: 95%;
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 30px auto;
     }
 
     .profile_2 p{
